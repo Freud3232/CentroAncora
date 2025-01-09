@@ -1,0 +1,61 @@
+body{
+    /* background: rgb(17,74,176);
+    background: linear-gradient(0deg, rgba(17, 75, 176, 0.664) 0%, rgba(157, 40, 69, 0.751) 50%); */
+}
+
+.navbar-brand img{
+    width: 4rem;
+}
+
+#myNav{
+   /* background-color: rgba(157, 40, 69, 0.751); */
+}
+
+#hero {
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+#hero h1{
+    color: white;
+    font-size: 4rem;
+}
+
+.icona-feature{
+    width: 40px;
+    filter: invert(1);
+}
+
+#features{
+    position: relative;
+}
+
+.descrizione{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    /* transform: translate(-50%, -50%); */
+    z-index: 1;
+    background: rgba(55, 55, 55, 0.651);
+    color: rgb(255, 255, 255);
+    padding: 2.3rem;
+    display: none;
+}
+
+@keyframes slideInLeft{
+    from{
+        transform: translateY(+200px);
+    }
+
+    to{
+        transform: translate(0);
+    }
+}
+
+.features:hover .descrizione {
+    display: block; 
+    animation: slideInLeft 1s;
+}
