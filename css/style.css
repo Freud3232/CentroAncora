@@ -1,14 +1,16 @@
 body{
-    /* background: rgb(17,74,176);
-    background: linear-gradient(0deg, rgba(17, 75, 176, 0.664) 0%, rgba(157, 40, 69, 0.751) 50%); */
+    background: rgb(17,74,176);
+    background: linear-gradient(0deg, rgba(17, 75, 176, 0.664) 0%, rgba(157, 40, 69, 0.751) 50%);
 }
 
 .navbar-brand img{
-    width: 4rem;
+    width: 3rem;
 }
 
 #myNav{
-   /* background-color: rgba(157, 40, 69, 0.751); */
+    background-color: #ffffff2d !important;
+    backdrop-filter: blur(10px) !important;
+   /* opacity: 20px; */
 }
 
 #hero {
@@ -22,6 +24,7 @@ body{
 #hero h1{
     color: white;
     font-size: 4rem;
+    text-align: center;
 }
 
 .icona-feature{
