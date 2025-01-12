@@ -112,7 +112,7 @@ p {
 	margin-bottom: 2rem;
 	border-radius: 10px;
 	box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	background-color: #f5f5dc;
+	background-color: var(--primary-hover);
 }
 
 .my-card img {
@@ -135,16 +135,16 @@ p {
 	margin-bottom: 0.8rem;
 	font-size: 1rem;
 	border-radius: 5px;
-	background-color: var(--primary);
+	background-color: var(--secondary);
 	color: var(--text);
 	border: none;
-	transition: all 0.2s;
+	transition: all 0.4s;
 	cursor: pointer;
 }
 
 .my-card-text button:hover {
 	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	background-color: var(--primary-hover);
+	background-color: var(--primary);
 }
 
 /* -------------------------------------------------------------------------- */
@@ -213,7 +213,7 @@ footer{
 		font-size: 5rem;
 	}
 	h2 {
-		margin-top: 4rem;
+		margin-top: 3rem;
 		margin-bottom: 4rem;
 	}
 	p {
