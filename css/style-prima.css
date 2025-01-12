@@ -1,0 +1,182 @@
+/* 
+--text: #ededed;
+--background: #97843b;
+--primary: #212121;
+--secondary: #434343;
+--accent: #cc3300;
+
+
+lilac: #c8a2c8
+nude: #f7d9bc
+beige: #ede8d0
+phard: #b28976
+texas rose: #ffbb55
+
+--text: #1d1d1d;
+--background: #a97169;
+--primary: #f7d9bc;
+--secondary: #967796;
+--accent: #d3a258;
+*/
+:root {
+	--text: #1d1d1d;
+	--background: #a97169;
+	--primary: #f7d9bc;
+	--secondary: #967796;
+	--accent: #d3a258;
+}
+
+body {
+	background: var(--background);
+	/* background: linear-gradient(0deg, #1f0408 0%, #c0576f 80%); */
+    /* background: rgb(247,217,188);
+background: linear-gradient(180deg, rgba(247,217,188,1) 0%, rgba(169,113,105,1) 50%); */
+
+	min-height: 100vh;
+}
+/* rgba(157, 40, 69, 0.751) */
+
+.navbar-brand img {
+	width: 3rem;
+}
+
+.my-container {
+	width: 80%;
+	margin: auto;
+}
+
+#myNav {
+	background-color: #ffffff2d !important;
+	backdrop-filter: blur(10px) !important;
+	/* opacity: 20px; */
+}
+
+#bambini {
+	clip-path: polygon(0% 10%, 100% 0%, 100% 90%, 0% 100%);
+	height: 50vh;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+}
+
+#bambini h2{
+    color: white;
+    font-size: 3rem;
+    font-weight: 700;
+
+}
+
+
+h1 {
+	color: var(--text);
+	font-size: 3rem;
+	text-align: center;
+	font-weight: 900;
+	margin: 2rem 0;
+}
+h2 {
+	color:var(--text);
+	font-size: 2rem;
+	font-weight: 700;
+}
+
+p {
+	font-size: 1.15rem;
+	text-align: justify;
+}
+
+#servizi a{
+    text-decoration: none;
+    color: var(--primary);
+    font-size: 1.7rem;
+    font-weight: 600;
+    transition: all .3s;
+}
+
+#servizi a:hover{
+    font-size: 2rem;
+    /* text-decoration: underline; */
+}
+
+.esterno {
+	/* width: 200px; */
+	width: 100%;
+}
+
+.icona-feature {
+	width: 40px;
+	filter: invert(1);
+}
+
+.features {
+	position: relative;
+}
+
+.descrizione {
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	/* transform: translate(-50%, -50%); */
+	z-index: 1;
+	background: rgba(55, 55, 55, 0.651);
+	color: #d2d0b9;
+	padding: 2.3rem;
+	display: none;
+}
+
+@keyframes slideInLeft {
+	from {
+		transform: translateY(+200px);
+	}
+
+	to {
+		transform: translate(0);
+	}
+}
+
+.features:hover .descrizione {
+	display: block;
+	animation: slideInLeft 1s;
+}
+
+/* #bambini{
+    background-image: url(../img/children.jpg); s
+    clip-path: polygon(0% 10%, 100% 0%, 100% 90%, 0% 100%);
+    height: 50vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+#bambini h2{
+    color: white;
+    font-size: 4rem;
+    text-align: center;
+} */
+
+/* -------------------------------------------------------------------------- */
+/*                               PAGINA BAMBINI                               */
+/* -------------------------------------------------------------------------- */
+
+
+
+@media screen and (min-width: 992px) {
+	h1 {
+		font-size: 4rem;
+	}
+	.my-container {
+		width: 60%;
+		margin: auto;
+	}
+
+	.esterno{
+        width: 400px;
+    }
+    
+
+    .descrizione-home{
+        width: 50%;
+    }
+}
