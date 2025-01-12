@@ -77,6 +77,13 @@ p {
 	max-width: 95vw;
 }
 
+#hero-swiper{
+	--swiper-navigation-size: 33px;
+	--swiper-navigation-color: var(--primary);
+	--swiper-pagination-color: var(--primary);
+}
+
+
 /* -------------------------------------------------------------------------- */
 /*                                    CARD                                    */
 /* -------------------------------------------------------------------------- */
