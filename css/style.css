@@ -11,6 +11,13 @@
 	width: 3rem;
 }
 
+.navbar a{
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+	font-size: .8rem;
+	letter-spacing: 2px;
+}
+
 body {
 	background-color: var(--background);
 }
@@ -50,29 +57,8 @@ p {
 	text-align: justify;
 }
 
-/* .immagine-centro img{
-	width: 100%;
-} */
-.swiper {
-	width: 100%;
-	height: 100%;
-}
 
-.swiper-slide {
-	text-align: center;
-	font-size: 18px;
-	background: #fff;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
 
-.swiper-slide img {
-	display: block;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-}
 
 #hero button {
 	border-radius: 7px;
@@ -171,6 +157,31 @@ p {
 }
 
 /* -------------------------------------------------------------------------- */
+/*                                   EQUIPE                                   */
+/* -------------------------------------------------------------------------- */
+#equipe img{
+	width: 150px;
+	border-radius: 50%;
+}
+.testo-equipe{
+	width: 90%;
+	text-align: center;
+}
+/* -------------------------------------------------------------------------- */
+/*                                   FOOTER                                   */
+/* -------------------------------------------------------------------------- */
+.logo-footer{
+	width: 3rem;
+}
+footer p{
+	font-size: .9rem;
+}
+
+footer{
+	background-color: var(--primary-hover);
+}
+
+/* -------------------------------------------------------------------------- */
 /*                                MEDIA QUERIES                               */
 /* -------------------------------------------------------------------------- */
 
@@ -182,6 +193,7 @@ p {
 		font-size: 5rem;
 	}
 	h2 {
+		margin-top: 4rem;
 		margin-bottom: 4rem;
 	}
 	.my-container {
@@ -197,5 +209,8 @@ p {
 	}
 	#servizi-sm {
 		display: none;
+	}
+	.logo-footer{
+		width: 5rem;
 	}
 }
