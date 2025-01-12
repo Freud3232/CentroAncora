@@ -1,9 +1,9 @@
 :root {
 	--text: #1d1d1d;
-	--background: #a97169;
+	--background: #c28185; /*#a97169;*/ 
 	--primary: #f7d9bc;
 	--primary-hover: #d89a8f;
-	--secondary: #c08285;
+	--secondary: #a97169;
 	--accent: #fbd9d0;
 }
 
@@ -83,6 +83,10 @@ p {
 	--swiper-navigation-size: 33px;
 	--swiper-navigation-color: var(--primary);
 	--swiper-pagination-color: var(--primary);
+}
+.immagine-centro, .testo-centro{
+	max-width: 80vw;
+	margin: auto;
 }
 
 
