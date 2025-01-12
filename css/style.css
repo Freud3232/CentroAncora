@@ -56,6 +56,8 @@ h2 {
 p {
 	font-family:  "Cabin", sans-serif;
 	text-align: justify;
+	letter-spacing: 1px;
+	font-size: 1.25rem;
 }
 
 #hero button {
@@ -209,6 +211,10 @@ footer{
 	h2 {
 		margin-top: 4rem;
 		margin-bottom: 4rem;
+	}
+	p {
+		letter-spacing: .5px;
+		font-size: 1rem;
 	}
 	.my-container {
 		max-width: 90%;
