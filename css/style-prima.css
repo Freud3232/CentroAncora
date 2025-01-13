@@ -49,7 +49,13 @@ background: linear-gradient(180deg, rgba(247,217,188,1) 0%, rgba(169,113,105,1) 
 	background-color: #ffffff2d !important;
 	backdrop-filter: blur(10px) !important;
 	/* opacity: 20px; */
+	transition: background-color 0.3s ease;
 }
+
+/* Navbar opaca */
+#myNav.scrolled {
+	background-color: rgba(0, 0, 0, 0.8); /* Colore opaco */
+  }
 
 #bambini {
 	clip-path: polygon(0% 10%, 100% 0%, 100% 90%, 0% 100%);
