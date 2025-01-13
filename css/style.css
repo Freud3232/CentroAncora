@@ -1,6 +1,6 @@
 :root {
 	--text: #1d1d1d;
-	--background: #c28185; /*#a97169;*/ 
+	--background: #c28185; /*#a97169;*/
 	--primary: #f7d9bc;
 	--primary-hover: #d89a8f;
 	--secondary: #a97169;
@@ -11,10 +11,10 @@
 	width: 3rem;
 }
 
-.navbar a{
+.navbar a {
 	font-family: "Poppins", sans-serif;
 	font-weight: 500;
-	font-size: .8rem;
+	font-size: 0.8rem;
 	letter-spacing: 2px;
 }
 
@@ -52,12 +52,22 @@ h2 {
 	margin-bottom: 1.5rem;
 	font-family: "Cabin", sans-serif;
 }
+h3{
+	font-family: "Cabin", sans-serif;
+	font-weight: 600;
+}
 
 p {
-	font-family:  "Cabin", sans-serif;
+	font-family: "Cabin", sans-serif;
 	text-align: justify;
 	letter-spacing: 1px;
 	font-size: 1.25rem;
+	hyphens: auto; /* Aggiunge sillabazione */
+  	word-wrap: break-word; /* Gestisce parole molto lunghe */
+}
+
+li{
+	font-family: "Cabin", sans-serif;
 }
 
 #hero button {
@@ -75,27 +85,27 @@ p {
 /* -------------------------------------------------------------------------- */
 /*                                  IL CENTRO                                 */
 /* -------------------------------------------------------------------------- */
-.descrizione{
+.descrizione {
 	max-width: 95vw;
 }
 
-#hero-swiper{
+#hero-swiper {
 	--swiper-navigation-size: 33px;
 	--swiper-navigation-color: var(--primary);
 	--swiper-pagination-color: var(--primary);
 }
-.immagine-centro, .testo-centro{
+.immagine-centro,
+.testo-centro {
 	max-width: 80vw;
 	margin: auto;
 }
 
-
 /* -------------------------------------------------------------------------- */
 /*                                    CARD                                    */
 /* -------------------------------------------------------------------------- */
-#servizi-lg {
+/* #servizi-lg {
 	display: none;
-}
+} */
 
 .my-container {
 	max-width: 80%;
@@ -109,30 +119,50 @@ p {
 
 .my-card {
 	width: 100%;
+	margin: auto;
 	margin-bottom: 2rem;
-	border-radius: 10px;
+	border-radius: 48% 48% 30% 0% / 40% 40% 20% 0%;
 	box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	background-color: var(--primary-hover);
+	/* background-color: var(--primary-hover); */
 }
-
+.image {
+	display: flex;
+	justify-content: center;
+	/* width: 200px; 
+	height: 200px;  */
+	padding: 20px;
+	
+}
 .my-card img {
-	width: 100%;
-	border-radius: 10px 10px 0 0;
+	max-width: 50%;
+	max-height: 50%;
+	border-radius: 50%;
+	margin-top: 2rem;
+	object-fit: cover;
 }
 
 .my-card-text {
-	padding: 1rem 1.4rem;
+	padding: 0rem 2rem;
+}
+.my-card-text ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.my-card-text ul li {
+	margin-bottom: 5px; /* Spaziatura tra gli elementi */
+	text-align: left; /* Allinea il testo a sinistra */
 }
 
-.my-card-text h2 {
-	margin-bottom: 1rem;
+.my-card-text h3 {
+	margin: 1rem 0;
 	font-size: 1.5rem;
 }
 
 .my-card-text button {
 	padding: 0.7rem 1rem;
 	margin-top: 1.25rem;
-	margin-bottom: 0.8rem;
+	margin-bottom: 2rem;
 	font-size: 1rem;
 	border-radius: 5px;
 	background-color: var(--secondary);
@@ -150,7 +180,7 @@ p {
 /* -------------------------------------------------------------------------- */
 /*                                  ACCORDION                                 */
 /* -------------------------------------------------------------------------- */
-.accordion {
+/* .accordion {
 	--bs-accordion-bg: var(--primary-hover);
 	--bs-accordion-btn-bg: var(--secondary);
 	--bs-accordion-active-bg: var(--accent);
@@ -174,30 +204,30 @@ p {
 
 .accordion-button {
 	font-family: "Poppins", sans-serif;
-}
+} */
 
 /* -------------------------------------------------------------------------- */
 /*                                   EQUIPE                                   */
 /* -------------------------------------------------------------------------- */
-.foto-equipe{
+.foto-equipe {
 	width: 150px;
 	border-radius: 50%;
 }
-.testo-equipe{
+.testo-equipe {
 	width: 80vw;
 	text-align: center;
 }
 /* -------------------------------------------------------------------------- */
 /*                                   FOOTER                                   */
 /* -------------------------------------------------------------------------- */
-.logo-footer{
+.logo-footer {
 	width: 3rem;
 }
-footer p{
-	font-size: .9rem;
+footer p {
+	font-size: 0.9rem;
 }
 
-footer{
+footer {
 	background-color: var(--primary-hover);
 }
 
@@ -217,7 +247,7 @@ footer{
 		margin-bottom: 4rem;
 	}
 	p {
-		letter-spacing: .5px;
+		letter-spacing: 0.5px;
 		font-size: 1rem;
 	}
 	.my-container {
@@ -234,7 +264,7 @@ footer{
 	#servizi-sm {
 		display: none;
 	}
-	.logo-footer{
+	.logo-footer {
 		width: 5rem;
 	}
 }
