@@ -62,7 +62,9 @@ document.addEventListener("DOMContentLoaded", () => {
 	window.addEventListener("scroll", handleScroll)
 })
 
-
+/* -------------------------------------------------------------------------- */
+/*                             CARD CHE COMPAIONO                             */
+/* -------------------------------------------------------------------------- */
 const observer = new IntersectionObserver((entries) => {
 	entries.forEach((entry) => {
 		if (entry.isIntersecting) {

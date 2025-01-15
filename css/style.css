@@ -1,7 +1,7 @@
 :root {
 	--text: #1d1d1d;
 	--background: #c28185; /*#a97169;*/
-	--primary: #f7d9bc;
+	--primary: #f7d9bc; 
 	--primary-hover: #d89a8f;
 	--secondary: #a97169;
 	--accent: #fbd9d0;
@@ -164,18 +164,37 @@ li {
 	margin-bottom: 2rem;
 	font-size: 1rem;
 	border-radius: 5px;
-	background-color: var(--secondary);
+	/* background-color: var(--secondary); */
 	color: var(--text);
 	border: none;
 	transition: all 0.4s;
 	cursor: pointer;
 }
 
-.my-card-text button:hover {
-	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	background-color: var(--primary);
+#card-text-3 button {
+	background-color: var(--secondary);
+}
+#card-text-3 button:hover {
+	box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.1) inset, -8px -8px 8px #bb7e75 inset;
+	background-color: var(--secondary);
 }
 
+#card-text-2 button{
+	background-color: var(--primary-hover);
+}
+
+#card-text-2 button:hover{
+	box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.1) inset, -8px -8px 8px #e3a196 inset;
+	background-color: var(--primary-hover);
+}
+#card-text-1 button{
+	background-color: #fbd9d0;
+}
+
+#card-text-1 button:hover{
+	box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.1) inset, -8px -8px 8px #fadad1 inset;
+	background-color: #fbd9d0;
+}
 /* -------------------------------------------------------------------------- */
 /*                                  ACCORDION                                 */
 /* -------------------------------------------------------------------------- */
