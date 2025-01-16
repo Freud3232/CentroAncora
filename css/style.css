@@ -22,6 +22,9 @@ body {
 	background-color: var(--background);
 }
 
+.text-center a{
+	font-size: 0.9rem;
+}
 /* .my-container {
 	width: 80%;
 	margin: auto;
@@ -170,14 +173,15 @@ li {
 	transition: all 0.4s;
 	cursor: pointer;
 }
+#card-text-1 button{
+	background-color: #fbd9d0;
+}
 
-#card-text-3 button {
-	background-color: var(--secondary);
+#card-text-1 button:hover{
+	box-shadow: 4px 4px 9px rgba(34, 34, 34, 0.1) inset, -11px -11px 11px #ffe7e1 inset;
+	background-color: #fbd9d0;
 }
-#card-text-3 button:hover {
-	box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.1) inset, -8px -8px 8px #bb7e75 inset;
-	background-color: var(--secondary);
-}
+
 
 #card-text-2 button{
 	background-color: var(--primary-hover);
@@ -187,13 +191,12 @@ li {
 	box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.1) inset, -8px -8px 8px #e3a196 inset;
 	background-color: var(--primary-hover);
 }
-#card-text-1 button{
-	background-color: #fbd9d0;
+#card-text-3 button {
+	background-color: var(--secondary);
 }
-
-#card-text-1 button:hover{
-	box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.1) inset, -8px -8px 8px #fadad1 inset;
-	background-color: #fbd9d0;
+#card-text-3 button:hover {
+	box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.1) inset, -8px -8px 8px #bb7e75 inset;
+	background-color: var(--secondary);
 }
 /* -------------------------------------------------------------------------- */
 /*                                  ACCORDION                                 */
@@ -284,6 +287,9 @@ footer {
 	}
 	.logo-footer {
 		width: 5rem;
+	}
+	.text-center a{
+		font-size: 0.8rem;
 	}
 }
 
