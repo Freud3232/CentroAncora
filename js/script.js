@@ -63,6 +63,24 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 /* -------------------------------------------------------------------------- */
+/*                            TITOLI CHE COMPAIONO                            */
+/* -------------------------------------------------------------------------- */
+document.addEventListener('DOMContentLoaded', () => {
+    const titles = document.querySelectorAll('#hero h1, #hero h2, #hero h3, #bottone-contatti-hero');
+    
+    titles.forEach((title, index) => {
+        title.style.opacity = '0';
+        title.style.transform = 'translateY(20px)';
+        title.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+        
+        setTimeout(() => {
+            title.style.opacity = '1';
+            title.style.transform = 'translateY(0)';
+        }, 500 * (index + 1));
+    });
+});
+
+/* -------------------------------------------------------------------------- */
 /*                             CARD CHE COMPAIONO                             */
 /* -------------------------------------------------------------------------- */
 const observer = new IntersectionObserver((entries) => {
