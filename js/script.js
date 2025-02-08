@@ -91,3 +91,21 @@ const observer = new IntersectionObserver((entries) => {
 	})
 })
 document.querySelectorAll(".my-card").forEach((card) => observer.observe(card))
+
+/* -------------------------------------------------------------------------- */
+/*                                NAVBAR OPACA                                */
+/* -------------------------------------------------------------------------- */
+window.addEventListener('scroll', function () {
+    let navbar = document.querySelector('nav');
+    let navbarToggler = document.querySelector('.navbar-toggler');
+    
+    if (window.scrollY > 100) {
+        navbar.classList.add('navbar-scrolled');
+        navbar.classList.remove('bg-transparent');
+        navbarToggler.classList.add('shrink-button'); // Rimpicciolisce il bottone
+    } else {
+        navbar.classList.remove('navbar-scrolled');
+        navbar.classList.add('bg-transparent');
+        navbarToggler.classList.remove('shrink-button'); // Ripristina la dimensione
+    }
+});

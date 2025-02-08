@@ -464,3 +464,73 @@ footer {
 	-o-transform: rotate(-135deg);
 	transform: rotate(-135deg);
 }
+
+/* -------------------------------------------------------------------------- */
+/*                               NAVBAR SCROLLED                              */
+/* -------------------------------------------------------------------------- */
+.navbar-scrolled {
+    background-color: rgba(0, 0, 0, 0.194) !important;
+}
+
+nav{
+	transition: all .5s;
+	/* max-height: 4rem; */
+}
+
+.navbar-brand{
+	padding: 0;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                MEDIA QUERIES                               */
+/* -------------------------------------------------------------------------- */
+
+@media screen and (min-width: 992px) {
+	.navbar-brand img {
+		width: 4rem;
+	}
+	h1 {
+		font-size: 5rem;
+	}
+	h2 {
+		margin-top: 1rem;
+		margin-bottom: 4rem;
+	}
+	p {
+		letter-spacing: 1px;
+		font-size: 1.1rem;
+	}
+	.my-container {
+		max-width: 90%;
+		flex-direction: row;
+	}
+	.my-card {
+		width: 30%;
+	}
+	#servizi-lg {
+		display: block;
+		margin-bottom: 6rem;
+	}
+	#servizi-sm {
+		display: none;
+	}
+	.logo-footer {
+		width: 5rem;
+	}
+	.text-center a {
+		font-size: 0.8rem;
+	}
+
+	/* -------------------------------------------------------------------------- */
+	/*                                  SCROLLBAR                                 */
+	/* -------------------------------------------------------------------------- */
+	::-webkit-scrollbar {
+		width: 6px;
+	}
+
+	::-webkit-scrollbar-thumb {
+		background: #323232;
+		border-radius: 5px;
+	}
+	
+}
