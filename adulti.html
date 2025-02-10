@@ -3,175 +3,58 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
+		<meta name="description" content="Scopri i nostri servizi dedicati a bambini, adolescenti e famiglie. Consulenze personalizzate." />
+		<meta name="keywords" content="centro, consulenze, psicologia, genitori, monza" />
+		<meta name="robots" content="index, follow" />
+		<link rel="icon" href="img/cropped-favicon.png" type="image/png" />
+
+		<title>Centro Ancora</title>
 
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
-
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
 
 		<link rel="stylesheet" href="./css/style.css" />
 	</head>
-	<body>
-		<nav class="navbar sticky-top navbar-transparent navbar-expand-lg bg-body-tertiary" id="myNav">
+	<body class="adulti">
+		<nav class="navbar sticky-top navbar-transparent navbar-expand-lg" id="myNav">
 			<div class="container">
-				<a class="navbar-brand" href="index.html"><img src="./img/logo.png" alt="logo centro ancora" /></a>
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<a class="navbar-brand" href="index.html"><img src="./img/logo-final-no-cerchio.png" alt="logo centro ancora" /></a>
+				<!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
+				</button> -->
+				<button data-mdb-button-init class="navbar-toggler first-button" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<div class="animated-icon1"><span></span><span></span><span></span></div>
 				</button>
-				<div class="collapse navbar-collapse" id="navbarSupportedContent">
-					<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+				<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+					<ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center">
 						<li class="nav-item">
-							<a class="nav-link active" aria-current="page" href="index.html">Home</a>
+							<a class="nav-link active" aria-current="page" href="index.html">HOME</a>
 						</li>
 						<!-- <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="#">Equipe</a>
                     </li> -->
 						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Bambini</a>
+							<a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"> SERVIZI</a>
 							<ul class="dropdown-menu">
-								<li><a class="dropdown-item" href="#">Valutazione DSA</a></li>
-								<li><a class="dropdown-item" href="#">Riabilitazione DSA</a></li>
-								<li><a class="dropdown-item" href="#">Psicoterapia al bambino</a></li>
-								<li><a class="dropdown-item" href="#">Metodo di studio</a></li>
-								<li>
-									<hr class="dropdown-divider" />
-								</li>
-								<li><a class="dropdown-item" href="#">Tutte le aree di supporto</a></li>
+								<li><a class="dropdown-item" href="bambini.html">Bambini</a></li>
+								<li><a class="dropdown-item" href="adolescenti.html">Adolescenti</a></li>
+								<li><a class="dropdown-item" href="adulti.html">Adulti</a></li>
+								<li><a class="dropdown-item" href="genitorialita.html">Genitorialità</a></li>
 							</ul>
 						</li>
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Adulti </a>
-							<ul class="dropdown-menu">
-								<li><a class="dropdown-item" href="#">Psicoterapia all’adulto</a></li>
-								<li><a class="dropdown-item" href="#">Percorso nutrizionale</a></li>
-								<li><a class="dropdown-item" href="#">Danzaterapia Clinica</a></li>
-								<!-- <li>
-									<hr class="dropdown-divider" />
-								</li> -->
-								<!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
-							</ul>
+						<li class="nav-item">
+							<a class="nav-link" href="equipe.html">EQUIPE</a>
 						</li>
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Chi Siamo </a>
-							<ul class="dropdown-menu">
-								<li><a class="dropdown-item" href="#">Action</a></li>
-								<li><a class="dropdown-item" href="#">Another action</a></li>
-								<li>
-									<hr class="dropdown-divider" />
-								</li>
-								<li><a class="dropdown-item" href="#">Something else here</a></li>
-							</ul>
+						<li class="nav-item">
+							<a class="nav-link" href="contatti.html">CONTATTI</a>
 						</li>
-						<!-- <li class="nav-item">
-                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                    </li> -->
 					</ul>
-					<!-- <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form> -->
 				</div>
 			</div>
 		</nav>
-
-		<section id="hero">
-			<div class="position-absolute top-50 start-50 translate-middle d-flex flex-column justify-content-center align-items-center">
-				<h1 class="animate__animated animate__fadeIn">Centro Ancora</h1>
-				<p>Lorem ipsum dolor sit amet.</p>
-				<button type="button" class="btn btn-primary">Button</button>
-			</div>
-		</section>
-
-		<div class="container">
-			<h2 class="mt-5">Cos'è il Centro Ancora</h2>
-			<p class="mb-5">Il Centro Ancora nasce dalla volontà di costruire uno spazio di cura del bambino, del sistema famiglia e dell’adulto che punti alla riscoperta del potenziale e delle risorse personali. Ogni percorso è costruito a partire dall’ineludibile unicità del singolo e del sistema in cui quest’ultimo è inserito, e di cui è parte attiva.</p>
-		</div>
-
-
-		<!-- <section id="bambini" class="position-relative">
-			<h2 class="position-absolute top-50 start-50 translate-middle">Bambini</h2>
-		</section>
-
-		<div class="container my-5">
-			
-				<p>Il Centro Ancora accoglie bambini dai 3 ai 12 anni con l’intento di accompagnare questi ultimi nel loro sviluppo di crescita cognitivo-emotivo. I percorsi costruiti ad hoc puntano alla riscoperta del potenziale e delle risorse interne e sono volti a condurre i bambini in itinerari di scoperte in cui il corpo diventa protagonista attivo delle esperienze proposte.</p>
-		</div> -->
-		<div class="container px-4 py-5" id="custom-cards">
-			<h2 class="pb-2 border-bottom">Ambiti di supporto</h2>
-
-			<div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
-				<div class="col-md-4 features">
-					<div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('./img/children.jpg')">
-						<div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-							<h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Bambini</h3>
-							<ul class="d-flex list-unstyled mt-auto">
-								<li class="me-auto">
-									<img class="icona-feature" src="./img/bebe-icon.png" alt="icona di un bebe" />
-								</li>
-							</ul>
-							<div class="descrizione">
-								<p>Il Centro Ancora accoglie bambini dai 3 ai 12 anni con l’intento di accompagnare questi ultimi nel loro sviluppo di crescita cognitivo-emotivo. I percorsi costruiti ad hoc puntano alla riscoperta del potenziale e delle risorse interne e sono volti a condurre i bambini in itinerari di scoperte in cui il corpo diventa protagonista attivo delle esperienze proposte.</p>
-
-								<a href="">Scopri di più</a>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-md-4 features">
-					<div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('./img/teenager-pic.webp')">
-						<div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-							<h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Adolescenti</h3>
-							<ul class="d-flex list-unstyled mt-auto">
-								<li class="me-auto">
-									<img class="icona-feature" src="./img/teenager-icon.png" alt="icona di un adolescente" />
-								</li>
-							</ul>
-							<div class="descrizione">
-								<p>
-									I percorsi rivolti ai ragazzi e giovani adulti partono dal presupposto che ogni individuo sia portatore di un’ unicità e creatività che è già presente in ognuno, prima ancora di poter essere scoperta. I momenti di difficoltà, siano essi dovuti a difficoltà psicologiche e/o scolastiche, sono un’occasione preziosa per la ragazza o il ragazzo per scoprire nuovi modi di guardare al proprio mondo interiore ed esteriore, con uno sguardo che sappia valorizzare le potenzialità progettuali di ognuno. crescere significa di certo proiettarsi verso il futuro ma
-									significa al contempo “discendere”
-								</p>
-
-								<a href="">Scopri di più</a>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-md-4 features">
-					<div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('./img/adults-pic-2.jpg')">
-						<div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-							<h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Adulti</h3>
-							<ul class="d-flex list-unstyled mt-auto">
-								<li class="me-auto">
-									<img class="icona-feature" src="./img/adult-icon-transformed.png" alt="" />
-								</li>
-							</ul>
-							<div class="descrizione">
-								<p>Sia i percorsi nutrizionali che quelli psicoterapeutici nascono dalla volontà di supportare chi chiede aiuto in modo da mobilitare le risorse personali, con la finalità di permettere ad ognuno di sentirsi coinvolto attivamente nel percorso. Chi accede a queste servizi sta vivendo dei momenti di difficoltà che spesso lo costringono a chiedere aiuto, momenti di fatica che sono in realtà un momento prezioso dalle potenzialità trasformative.</p>
-
-								<a href="">Scopri di più</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="container">
-			<footer class="py-3 my-4">
-				<ul class="nav justify-content-center border-bottom pb-3 mb-3">
-					<li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
-					<li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
-					<li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
-					<li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
-					<li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
-				</ul>
-				<p class="text-center text-body-secondary">© 2024 Company, Inc</p>
-			</footer>
-		</div>
-
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 	</body>
 </html>

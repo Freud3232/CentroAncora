@@ -18,8 +18,28 @@
 	letter-spacing: 2px;
 }
 
+/* -------------------------------------------------------------------------- */
+/*                                SFONDI PAGINE                               */
+/* -------------------------------------------------------------------------- */
+
 body {
 	background-color: var(--background);
+}
+
+.home{
+	--background: #c28185;
+}
+
+.bambini{
+	--background: #fbd9d0;
+}
+
+.adolescenti{
+	--background: #d89a8f;
+}
+
+.adulti{
+	--background: #a97169;
 }
 
 .text-center a {
@@ -56,6 +76,7 @@ h1 {
 	font-size: 3.5rem;
 	letter-spacing: 8px;
 	font-weight: 900;
+	margin-bottom: 2rem;
 }
 
 h2 {
@@ -107,6 +128,11 @@ p {
 
 li {
 	font-family: "Cabin", sans-serif;
+	list-style-type: none;
+}
+
+a{
+	text-decoration: none;
 }
 
 .dropdown-menu {
@@ -304,6 +330,14 @@ footer {
 }
 
 /* -------------------------------------------------------------------------- */
+/*                              CONTAINER PAGINE                              */
+/* -------------------------------------------------------------------------- */
+.container-pagine{
+	width: 50%;
+	margin: auto;
+}
+
+/* -------------------------------------------------------------------------- */
 /*                                MEDIA QUERIES                               */
 /* -------------------------------------------------------------------------- */
 
@@ -332,6 +366,12 @@ footer {
 	.my-card {
 		width: 28%;
 		height: 75vh;
+	}
+	.image{
+		margin-bottom: -30px;
+	}
+	.my-card img{
+		max-width: 50%;
 	}
 	#servizi-lg {
 		display: block;
