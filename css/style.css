@@ -12,12 +12,19 @@
 }
 
 .navbar a {
-	font-family: "Poppins", sans-serif;
-	font-weight: 500;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 600;
 	font-size: 0.8rem;
 	letter-spacing: 2px;
 }
 
+.nav-link:hover {
+	color: var(--primary) !important;
+}
+
+.navbar-brand {
+	padding: 0;
+}
 /* -------------------------------------------------------------------------- */
 /*                                SFONDI PAGINE                               */
 /* -------------------------------------------------------------------------- */
@@ -26,19 +33,19 @@ body {
 	background-color: var(--background);
 }
 
-.home{
+.home {
 	--background: #c28185;
 }
 
-.bambini{
+.bambini {
 	--background: #fbd9d0;
 }
 
-.adolescenti{
+.adolescenti {
 	--background: #d89a8f;
 }
 
-.adulti{
+.adulti {
 	--background: #a97169;
 }
 
@@ -57,7 +64,7 @@ body {
 	background-color: transparent;
 } */
 
-#hero {
+#hero .container {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -68,26 +75,28 @@ body {
 #hero h2,
 #hero h3 {
 	opacity: 0;
+	color: var(--text);
 }
 
 h1 {
-	font-family: "Cabin", sans-serif;
+	font-family: "Montserrat", serif; /*Prima era Cabin*/
 	text-align: center;
 	font-size: 3.5rem;
 	letter-spacing: 8px;
-	font-weight: 900;
+	font-optical-sizing: auto;
+	font-weight: 500;
 	margin-bottom: 2rem;
 }
 
 h2 {
-	font-family: "Cabin", sans-serif;
+	font-family: "Montserrat", serif;
 	text-align: center;
-	font-weight: 800;
+	font-weight: 400;
 	margin-bottom: 1.5rem;
 }
 h3 {
-	font-family: "Cabin", sans-serif;
-	font-weight: 500;
+	font-family: "Montserrat", serif;
+	font-weight: 300;
 	margin-bottom: 2rem;
 }
 
@@ -105,15 +114,18 @@ h3 {
 	--bs-btn-padding-x: 1.5rem;
 	--bs-btn-padding-y: 0.5rem;
 
+	font-family: "Montserrat", serif;
+
 	box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 .btn-primary:hover {
-	padding: 0.7rem 1.7rem;
+	transform: scale(1.2) !important;
 }
 
 #bottone-contatti-hero {
-	transition: all 0.3s !important;
+	display: inline-block;
+	transition: all 0.3s ease-in-out !important;
 	opacity: 0;
 }
 
@@ -131,7 +143,7 @@ li {
 	list-style-type: none;
 }
 
-a{
+a {
 	text-decoration: none;
 }
 
@@ -163,9 +175,6 @@ a{
 /* -------------------------------------------------------------------------- */
 /*                                    CARD                                    */
 /* -------------------------------------------------------------------------- */
-/* #servizi-lg {
-	display: none;
-} */
 
 .my-container {
 	max-width: 80%;
@@ -186,7 +195,7 @@ a{
 	display: flex;
 	flex-direction: column;
 	justify-content: stretch;
-	height: fit-content;
+	height: 70vh;
 	overflow: hidden;
 }
 
@@ -213,7 +222,7 @@ a{
 	font-weight: 700;
 }
 .my-card-text {
-	padding: 0rem 3rem;
+	padding: 0rem 2rem;
 }
 .my-card-text ul {
 	list-style-type: none;
@@ -231,7 +240,7 @@ a{
 	display: flex;
 	/* justify-content: center; */
 	align-self: flex-end;
-	margin: auto auto 3rem 2.6rem;
+	margin: auto auto 1.5rem 2rem;
 }
 
 .margine-bottone-carta a {
@@ -241,7 +250,7 @@ a{
 	text-align: center;
 	color: var(--text);
 	border: none;
-	transition: all 0.4s;
+	transition: all 0.4s ease-in-out;
 	cursor: pointer;
 	font-size: 1rem;
 	font-weight: 600;
@@ -250,59 +259,40 @@ a{
 
 #bottone-carta-1 a {
 	background-color: #fbd9d0;
+	/* border: 1px solid #c2a79f97; */
 }
 
 #bottone-carta-1 a:hover {
 	box-shadow: 4px 4px 9px rgba(34, 34, 34, 0.1) inset, -11px -11px 11px #ffe5de inset;
 	background-color: #fbd9d0;
-	font-size: 0.98rem;
+	transform: scale(0.98);
 }
 
 #bottone-carta-2 a {
 	background-color: var(--primary-hover);
+	/* border: 1px solid #c28185bd; */
 }
 
 #bottone-carta-2 a:hover {
 	box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.1) inset, -8px -8px 8px #e3a196 inset;
 	background-color: var(--primary-hover);
-	font-size: 0.98rem;
+	transform: scale(0.98);
 }
 #bottone-carta-3 a {
 	background-color: var(--secondary);
+	/* border: 1px solid #724c469e; */
 }
 #bottone-carta-3 a:hover {
 	box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.1) inset, -8px -8px 8px #bb7e75 inset;
 	background-color: var(--secondary);
-	font-size: 0.98rem;
-}
-/* -------------------------------------------------------------------------- */
-/*                                  ACCORDION                                 */
-/* -------------------------------------------------------------------------- */
-/* .accordion {
-	--bs-accordion-bg: var(--primary-hover);
-	--bs-accordion-btn-bg: var(--secondary);
-	--bs-accordion-active-bg: var(--accent);
-	--bs-accordion-btn-focus-box-shadow: none;
-	--bs-accordion-active-color: var(--text);
-}
-.accordion-item {
-	border: none;
+	transform: scale(0.98);
 }
 
-.accordion-button:not(.collapsed) {
-	box-shadow: none;
+.hidden {
+	opacity: 0;
+	transform: translateY(40px);
+	transition: opacity 1s ease-out, transform 1s ease-out;
 }
-
-.accordion-body a {
-	text-decoration: none;
-	font-size: 1.05rem;
-	font-weight: bold;
-	color: var(--primary);
-}
-
-.accordion-button {
-	font-family: "Poppins", sans-serif;
-} */
 
 /* -------------------------------------------------------------------------- */
 /*                                   EQUIPE                                   */
@@ -326,101 +316,17 @@ footer p {
 }
 
 footer {
+	margin-top: 5rem;
 	background-color: var(--primary-hover);
 }
 
 /* -------------------------------------------------------------------------- */
 /*                              CONTAINER PAGINE                              */
 /* -------------------------------------------------------------------------- */
-.container-pagine{
-	width: 50%;
+.container-pagine {
+	width: 80%;
 	margin: auto;
 }
-
-/* -------------------------------------------------------------------------- */
-/*                                MEDIA QUERIES                               */
-/* -------------------------------------------------------------------------- */
-
-@media screen and (min-width: 992px) {
-	.navbar-brand img {
-		width: 4rem;
-	}
-	h1 {
-		font-size: 5rem;
-	}
-	h2 {
-		margin-top: 2rem;
-		margin-bottom: 4rem;
-	}
-	#hero{
-		margin-bottom: 8rem;
-	}
-	p {
-		letter-spacing: 0.5px;
-		font-size: 1.25rem;
-	}
-	.my-container {
-		max-width: 90%;
-		flex-direction: row;
-	}
-	.my-card {
-		width: 28%;
-		height: 75vh;
-	}
-	.image{
-		margin-bottom: -30px;
-	}
-	.my-card img{
-		max-width: 50%;
-	}
-	#servizi-lg {
-		display: block;
-		margin-top: 10rem;
-		margin-bottom: 6rem;
-	}
-	#servizi-sm {
-		display: none;
-	}
-	.logo-footer {
-		width: 5rem;
-	}
-	.text-center a {
-		font-size: 0.8rem;
-	}
-
-	/* -------------------------------------------------------------------------- */
-	/*                   APRIRE IL MENU A TENDINA SENZA CLICCARE                  */
-	/* -------------------------------------------------------------------------- */
-	/* Nascondi il dropdown inizialmente */
-	.dropdown-menu {
-		display: block; /* Lascia sempre il menu nel flusso del DOM */
-		visibility: hidden; /* Nascondi il menu */
-		opacity: 0; /* Imposta trasparenza iniziale */
-		transform: translateY(-10px); /* Posiziona leggermente sopra */
-		transition: all 0.4s ease-in-out; /* Anima posizione e opacità */
-	}
-
-	/* Mostra il dropdown al passaggio del mouse */
-	.dropdown:hover .dropdown-menu {
-		visibility: visible; /* Rendi visibile */
-		opacity: 1; /* Rende il menu completamente visibile */
-		transform: translateY(0); /* Riporta il menu alla posizione originale */
-	}
-
-	/* Stile per gli elementi del menu */
-	.dropdown-item {
-		padding: 0.8rem 1.5rem;
-		transition: all 0.3s;
-	}
-
-	/* Cambia il colore del testo quando si passa sopra "SERVIZI" */
-	.nav-item.dropdown:hover .dropdown-toggle {
-		color: var(--primary); /* Usa una variabile CSS per il colore */
-	}
-}
-/* -------------------------------------------------------------------------- */
-/*                          SERVIZI DROPDOWN DA CELL                          */
-/* -------------------------------------------------------------------------- */
 
 /* -------------------------------------------------------------------------- */
 /*                                   BURGER                                   */
@@ -469,7 +375,7 @@ footer {
 }
 
 .animated-icon1 span {
-	background: #3c3c3c;
+	background: var(--text);
 }
 
 .animated-icon1 span:nth-child(1) {
@@ -509,21 +415,132 @@ footer {
 /*                               NAVBAR SCROLLED                              */
 /* -------------------------------------------------------------------------- */
 .navbar-scrolled {
-    background-color: rgba(0, 0, 0, 0.194) !important;
+	background-color: rgba(0, 0, 0, 0.584) !important;
+	--bs-navbar-padding-y: 0rem;
 }
 
-nav{
-	transition: all .5s;
+.logo-scrolled {
+	filter: brightness(0) saturate(100%) invert(90%) sepia(1%) saturate(7473%) hue-rotate(326deg) brightness(101%) contrast(93%);
+}
+
+.item-scrolled {
+	color: var(--primary) !important;
+}
+
+nav {
+	transition: all 0.5s;
 	/* max-height: 4rem; */
 }
 
-.navbar-brand{
-	padding: 0;
+/* -------------------------------------------------------------------------- */
+/*                               PAGINA BAMBINI                               */
+/* -------------------------------------------------------------------------- */
+#main-bambini {
+	margin-top: 5rem;
+	margin-bottom: 10rem;
+}
+
+#servizi-bambini {
+	margin-top: 5rem;
+}
+.card-wrapper {
+	display: inline-block;
+	perspective: 1000px;
+}
+.card-wrapper .carta-bambini {
+	position: relative;
+	cursor: pointer;
+	transition-duration: 0.6s;
+	transition-timing-function: ease-in-out;
+	transform-style: preserve-3d;
+}
+.card-wrapper .carta-bambini .front,
+.card-wrapper .carta-bambini .back {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	transform: rotateX(0deg);
+}
+.card-wrapper .carta-bambini .front {
+	z-index: 2;
+}
+.card-wrapper .carta-bambini .back,
+.card-wrapper.flip-right .carta-bambini .back {
+	transform: rotateY(180deg);
+}
+.card-wrapper:hover .carta-bambini,
+.card-wrapper.flip-right:hover .carta-bambini {
+	transform: rotateY(180deg);
+}
+
+.card-wrapper,
+.carta-bambini {
+	width: 400px;
+	height: 200px;
+	margin-bottom: 10px; /* Remove the margin here */
+}
+
+/* Add a new class to handle the spacing through the Bootstrap column */
+.col.card-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.carta-bambini .front,
+.carta-bambini .back {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/* border: 1px solid #fc545e; */
+	border-radius: 4px;
+}
+.carta-bambini .front {
+	opacity: 1;
+	color: white;
+	font-weight: 700;
+	font-size: 1.25rem;
+	text-align: center;
+	position: relative;
+	z-index: 2;
+}
+
+.carta-bambini .front > span {
+	position: relative;
+	z-index: 2;
+}
+
+.carta-bambini .overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.3);
+	z-index: 1;
+}
+
+.carta-bambini .back {
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: #ffffff;
+	background: var(--primary-hover);
 }
 
 /* -------------------------------------------------------------------------- */
 /*                                MEDIA QUERIES                               */
 /* -------------------------------------------------------------------------- */
+@media screen and (min-width: 576px){
+	.card-wrapper,
+	.carta-bambini {
+		width: 200px;
+		height: 200px;
+		margin-bottom: 10px; /* Remove the margin here */
+	}
+}
+
 
 @media screen and (min-width: 992px) {
 	.navbar-brand img {
@@ -533,22 +550,40 @@ nav{
 		font-size: 5rem;
 	}
 	h2 {
-		margin-top: 1rem;
+		margin-top: 2rem;
 		margin-bottom: 4rem;
 	}
+	#hero {
+		margin-top: 5rem;
+		margin-bottom: 10rem;
+	}
 	p {
-		letter-spacing: 1px;
-		font-size: 1.1rem;
+		letter-spacing: 0.5px;
+		font-size: 1.25rem;
 	}
 	.my-container {
 		max-width: 90%;
 		flex-direction: row;
 	}
 	.my-card {
-		width: 30%;
+		width: 28%;
+		height: 75vh;
+	}
+	.image {
+		margin-bottom: -30px;
+	}
+	.my-card img {
+		max-width: 50%;
+	}
+	.my-card-text {
+		padding: 0rem 3rem;
+	}
+	.margine-bottone-carta {
+		margin: auto auto 3rem 2.6rem;
 	}
 	#servizi-lg {
 		display: block;
+		margin-top: 5rem;
 		margin-bottom: 6rem;
 	}
 	#servizi-sm {
@@ -559,6 +594,42 @@ nav{
 	}
 	.text-center a {
 		font-size: 0.8rem;
+	}
+
+	.container-pagine {
+		width: 50%;
+		margin: auto;
+	}
+
+	
+	/* -------------------------------------------------------------------------- */
+	/*                   APRIRE IL MENU A TENDINA SENZA CLICCARE                  */
+	/* -------------------------------------------------------------------------- */
+	/* Nascondi il dropdown inizialmente */
+	.dropdown-menu {
+		display: block; /* Lascia sempre il menu nel flusso del DOM */
+		visibility: hidden; /* Nascondi il menu */
+		opacity: 0; /* Imposta trasparenza iniziale */
+		transform: translateY(-10px); /* Posiziona leggermente sopra */
+		transition: all 0.4s ease-in-out; /* Anima posizione e opacità */
+	}
+
+	/* Mostra il dropdown al passaggio del mouse */
+	.dropdown:hover .dropdown-menu {
+		visibility: visible; /* Rendi visibile */
+		opacity: 1; /* Rende il menu completamente visibile */
+		transform: translateY(0); /* Riporta il menu alla posizione originale */
+	}
+
+	/* Stile per gli elementi del menu */
+	.dropdown-item {
+		padding: 0.8rem 1.5rem;
+		transition: all 0.3s;
+	}
+
+	/* Cambia il colore del testo quando si passa sopra "SERVIZI" */
+	.nav-item.dropdown:hover .dropdown-toggle {
+		color: var(--primary); /* Usa una variabile CSS per il colore */
 	}
 
 	/* -------------------------------------------------------------------------- */
@@ -572,5 +643,4 @@ nav{
 		background: #323232;
 		border-radius: 5px;
 	}
-	
 }

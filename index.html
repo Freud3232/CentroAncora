@@ -15,7 +15,7 @@
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
 
 		<link rel="stylesheet" href="./css/style.css" />
 	</head>
@@ -58,10 +58,12 @@
 		</nav>
 
 		<section id="hero">
-			<h1 class="mt-5">CENTRO ANCORA</h1>
-			<h2>Centro di Psicologia e Pedagogia</h2>
-			<h3>Hai bisogno di supporto?</h3>
-			<a href="contatti.html" class="btn btn-primary" id="bottone-contatti-hero">Contattaci</a>
+			<div class="container">
+				<h1 class="mt-5">CENTRO ANCORA</h1>
+				<h2>Centro di Psicologia e Pedagogia</h2>
+				<h3>Hai bisogno di supporto?</h3>
+				<a href="contatti.html" class="btn btn-primary" id="bottone-contatti-hero">Contattaci</a>
+			</div>
 		</section>
 
 		<!-- DESCRIZIONE -->
@@ -182,7 +184,8 @@
 						</ul>
 					</div>
 					<div class="margine-bottone-carta" id="bottone-carta-1">
-						<a href="bambini.html" class="bottone-card">Scopri di più</a>
+						<a href="bambini.html" class="bottone-card">Scopri di più &#128073
+						</a>
 					</div>
 				</div>
 				<div class="my-card" style="background-color: #d89a8f">
@@ -202,7 +205,7 @@
 						</ul>
 					</div>
 					<div class="margine-bottone-carta" id="bottone-carta-2">
-						<a href="adolescenti.html" class="bottone-card">Scopri di più</a>
+						<a href="adolescenti.html" class="bottone-card">Scopri di più &rarr;</a>
 					</div>
 				</div>
 				<div class="my-card" style="background-color: #a97169">
@@ -219,7 +222,7 @@
 							<li>&#10004 Osteopatia</li>
 						</ul>
 					</div>
-					<div class="margine-bottone-carta" id="bottone-carta-3"><a href="adulti.html" class="bottone-card">Scopri di più</a></div>
+					<div class="margine-bottone-carta" id="bottone-carta-3"><a href="adulti.html" class="bottone-card">Scopri di più &rarr;</a></div>
 				</div>
 			</div>
 		</section>
@@ -228,7 +231,7 @@
 		<section id="equipe" class="mt-5">
 			<h2 class="mb-4">EQUIPE</h2>
 			<div class="container">
-				<div class="row flex-column flex-md-row justify-content-center align-items-center">
+				<div class="row flex-column justify-content-center align-items-center">
 					<img class="col-md-6 mb-3 foto-equipe" src="img/Giulia-Lomonaco.jpg" alt="" />
 					<div class="col-md-6 testo-equipe">
 						<h3>Dott.ssa Giulia Lo Monaco</h3>
@@ -241,23 +244,46 @@
 
 		<!-- FOOTER -->
 
-		<footer class="py-3 mt-4">
+		<footer class="py-3">
 			<div class="container d-flex flex-column-reverse flex-md-row justify-content-center align-items-center">
 				<p class="col-md-4 mb-2 text-body-secondary">Via Tiziano Vecellio, 5 | 20835 Muggiò (MB)</p>
 				<a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-2 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
 					<img class="logo-footer" src="./img/logo-final-no-cerchio.png" alt="" />
 				</a>
 				<ul class="nav col-md-4 justify-content-end">
-					<li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
-					<li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Contatti</a></li>
-					<li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Chi Siamo</a></li>
-					<li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Equipe</a></li>
+					<li class="nav-item"><a href="#" class="px-2 text-body-secondary">Home</a></li>
+					<li class="nav-item"><a href="#" class="px-2 text-body-secondary">Contatti</a></li>
+					<li class="nav-item"><a href="#" class="px-2 text-body-secondary">Chi Siamo</a></li>
+					<li class="nav-item"><a href="#" class="px-2 text-body-secondary">Equipe</a></li>
 				</ul>
 			</div>
 		</footer>
 
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<script>
+			/* -------------------------------------------------------------------------- */
+			/*                                   SWIPER                                   */
+			/* -------------------------------------------------------------------------- */
+			var swiper = new Swiper("#hero-swiper", {
+				spaceBetween: 30,
+				centeredSlides: true,
+				loop: true,
+				autoplay: {
+					delay: 2500,
+					disableOnInteraction: false,
+				},
+				pagination: {
+					el: ".swiper-pagination",
+					clickable: true,
+					dynamicBullets: true,
+				},
+				navigation: {
+					nextEl: ".swiper-button-next",
+					prevEl: ".swiper-button-prev",
+				},
+			})
+		</script>
 		<script src="js/script.js"></script>
 	</body>
 </html>
