@@ -84,34 +84,42 @@ elementsToAnimate.forEach((el) => observer.observe(el));
 /* -------------------------------------------------------------------------- */
 /*                                NAVBAR OPACA                                */
 /* -------------------------------------------------------------------------- */
+let lastScrollY = 0;
+
 window.addEventListener('scroll', function () {
-	let items = this.document.querySelectorAll(".nav-link");
+    let items = this.document.querySelectorAll(".nav-link");
     let navbar = document.querySelector('nav');
     let navbarToggler = document.querySelector('.navbar-toggler');
     let logo = this.document.querySelector(".navbar-brand");
-	let burger = this.document.querySelectorAll(".animated-icon1 span");
+    let burger = this.document.querySelectorAll(".animated-icon1 span");
 
-    if (window.scrollY > 100) {
+    if (Math.abs(window.scrollY - lastScrollY) < 5) {
+        return; // Ignore small scroll changes
+    }
+
+    if (window.scrollY >= 150) {
         navbar.classList.add('navbar-scrolled');
         navbar.classList.remove('bg-transparent');
-        navbarToggler.classList.add('shrink-button'); // Rimpicciolisce il bottoneù
-		logo.classList.add("logo-scrolled");
-		burger.forEach(element => {
-			element.style.background = "#f7d9bc";
-		});
-		items.forEach(element => {
-			element.classList.add("item-scrolled");
-		});
+        navbarToggler.classList.add('shrink-button'); // Rimpicciolisce il bottone
+        logo.classList.add("logo-scrolled");
+        burger.forEach(element => {
+            element.style.background = "#f7d9bc";
+        });
+        items.forEach(element => {
+            element.classList.add("item-scrolled");
+        });
     } else {
         navbar.classList.remove('navbar-scrolled');
         navbar.classList.add('bg-transparent');
         navbarToggler.classList.remove('shrink-button'); // Ripristina la dimensione
-		logo.classList.remove("logo-scrolled");
-		burger.forEach(element => {
-			element.style.background = "#1d1d1d";
-		});
-		items.forEach(element => {
-			element.classList.remove("item-scrolled");
-		});
+        logo.classList.remove("logo-scrolled");
+        burger.forEach(element => {
+            element.style.background = "#1d1d1d";
+        });
+        items.forEach(element => {
+            element.classList.remove("item-scrolled");
+        });
     }
+
+    lastScrollY = window.scrollY;
 });

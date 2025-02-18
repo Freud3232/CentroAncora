@@ -1,6 +1,6 @@
 :root {
-	--text: #1d1d1d;
-	--background: #c28185; /*#a97169;*/
+	--text: black; /*#1d1d1d;*/
+	--background: #c28185; /*#a97169; #cd9598; -- questo secondo me è più carino*/
 	--primary: #f7d9bc;
 	--primary-hover: #d89a8f;
 	--secondary: #a97169;
@@ -11,6 +11,9 @@
 	width: 3rem;
 }
 
+a{
+	color: var(--bs-navbar-toggler-border-color);
+}
 .navbar a {
 	font-family: "Montserrat", sans-serif;
 	font-weight: 600;
@@ -21,6 +24,7 @@
 .nav-link:hover {
 	color: var(--primary) !important;
 }
+
 
 .navbar-brand {
 	padding: 0;
@@ -33,12 +37,17 @@ body {
 	background-color: var(--background);
 }
 
-.home {
-	--background: #c28185;
-}
+/* .home {
+	background: rgb(194,129,133);
+background: linear-gradient(0deg, rgba(194,129,133,1) 41%, rgba(236,236,236,1) 60%, rgba(194,129,133,1) 75%);
+} */
 
 .bambini {
 	--background: #fbd9d0;
+}
+
+.bambini .nav-link:hover{
+	color: #c28378 !important;
 }
 
 .adolescenti {
@@ -63,7 +72,9 @@ body {
 	opacity: 20px;
 	background-color: transparent;
 } */
-
+/* -------------------------------------------------------------------------- */
+/*                                    INDEX                                   */
+/* -------------------------------------------------------------------------- */
 #hero .container {
 	display: flex;
 	flex-direction: column;
@@ -82,10 +93,11 @@ h1 {
 	font-family: "Montserrat", serif; /*Prima era Cabin*/
 	text-align: center;
 	font-size: 3.5rem;
-	letter-spacing: 8px;
+	letter-spacing: 5px;
 	font-optical-sizing: auto;
 	font-weight: 500;
 	margin-bottom: 2rem;
+	color: var(--text);
 }
 
 h2 {
@@ -98,6 +110,10 @@ h3 {
 	font-family: "Montserrat", serif;
 	font-weight: 300;
 	margin-bottom: 2rem;
+}
+
+strong{
+	color: black;
 }
 
 .btn-primary {
@@ -150,6 +166,7 @@ a {
 .dropdown-menu {
 	--bs-dropdown-bg: var(--accent); /* Colore di sfondo personalizzato */
 	--bs-dropdown-link-hover-bg: var(--primary-hover); /* Colore al passaggio del mouse sui link */
+	--bs-dropdown-link-active-bg: var(--primary-hover); /* Colore al click sui link */
 	padding: 0;
 	text-align: center;
 }
@@ -157,8 +174,10 @@ a {
 /* -------------------------------------------------------------------------- */
 /*                                  IL CENTRO                                 */
 /* -------------------------------------------------------------------------- */
-.descrizione {
-	max-width: 95vw;
+section#descrizione {
+	/* max-width: 95vw; */
+	/* background-color: rgb(238, 238, 238) !important;
+	padding: 2rem 0 2rem 0; */
 }
 
 #hero-swiper {
@@ -263,7 +282,7 @@ a {
 }
 
 #bottone-carta-1 a:hover {
-	box-shadow: 4px 4px 9px rgba(34, 34, 34, 0.1) inset, -11px -11px 11px #ffe5de inset;
+	box-shadow: 4px 4px 9px rgba(34, 34, 34, 0.1) inset, -11px -11px 11px #ffe1d9 inset;
 	background-color: #fbd9d0;
 	transform: scale(0.98);
 }
@@ -435,7 +454,7 @@ nav {
 /* -------------------------------------------------------------------------- */
 /*                               PAGINA BAMBINI                               */
 /* -------------------------------------------------------------------------- */
-#main-bambini {
+.main-bambini, .testi-pagine {
 	margin-top: 5rem;
 	margin-bottom: 10rem;
 }
@@ -526,7 +545,82 @@ nav {
 	font-size: 1.5rem;
 	font-weight: 700;
 	color: #ffffff;
-	background: var(--primary-hover);
+	background: #c28185;
+}
+
+#titolo-adolescente{
+	font-size: 2rem;
+}
+/* -------------------------------------------------------------------------- */
+/*                                 SOTTOPAGINE                                */
+/* -------------------------------------------------------------------------- */
+.testi-pagine h1{
+	font-size: 2rem;
+	text-align: left;
+}
+.citazione-container {
+    width: 80%;
+    margin-left: auto;
+    text-align: right;
+    padding: 10px;
+	padding-right: 2rem;
+    border-right: 4px solid #e1c5aa; /* Linea di evidenziazione a sinistra */
+    font-style: italic; /* Per un effetto più citazione */
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+.citazione{
+	text-align: right;
+	color: #323232;
+	font-size: 1.5rem;
+}
+
+.dropdown-item {
+	padding: 1rem 0rem;
+	border-bottom: 1px solid #e1c5aa;
+	transition: all 0.3s;
+}
+.dropdown-menu  > .dropdown-item:last-child {
+    border-bottom: none !important;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                                PAGINA EQUIPE                               */
+/* -------------------------------------------------------------------------- */
+#pagina-equipe{
+	margin-top: 5rem;
+	margin-bottom: 10rem;
+}
+
+.membri{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 100px;
+}
+
+.membro img{
+	width: 200px;
+}
+
+.membro{
+	position: relative;
+}
+.nome-ruolo h2{
+	font-size: 1.5rem;
+	margin: 0;
+}
+.nome-ruolo{
+	background-color: var(--primary);
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+	width: 200px;
+	padding: 10px;
+	color: rgb(255, 255, 255);
+	position: absolute;
+	top: 160px;
+	left: 30px;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -539,6 +633,16 @@ nav {
 		height: 200px;
 		margin-bottom: 10px; /* Remove the margin here */
 	}
+
+	#titolo-adolescente{
+		font-size: 3rem;
+	}
+}
+
+@media screen and (min-width: 680px){
+	#titolo-adolescente{
+		font-size: 4rem;
+	}
 }
 
 
@@ -550,7 +654,7 @@ nav {
 		font-size: 5rem;
 	}
 	h2 {
-		margin-top: 2rem;
+		margin-top: 3rem;
 		margin-bottom: 4rem;
 	}
 	#hero {
@@ -626,10 +730,21 @@ nav {
 		padding: 0.8rem 1.5rem;
 		transition: all 0.3s;
 	}
+	.dropdown-menu  > .dropdown-item:last-child {
+		border-bottom: none !important;
+	}
 
 	/* Cambia il colore del testo quando si passa sopra "SERVIZI" */
 	.nav-item.dropdown:hover .dropdown-toggle {
 		color: var(--primary); /* Usa una variabile CSS per il colore */
+	}
+
+	.bambini .nav-item.dropdown:hover .dropdown-toggle {
+		color: #c28378; /* Usa una variabile CSS per il colore */
+	}
+
+	#titolo-adolescente{
+		font-size: 5rem;
 	}
 
 	/* -------------------------------------------------------------------------- */
@@ -642,5 +757,12 @@ nav {
 	::-webkit-scrollbar-thumb {
 		background: #323232;
 		border-radius: 5px;
+	}
+
+	/* -------------------------------------------------------------------------- */
+	/*                                 SOTTOPAGINE                                */
+	/* -------------------------------------------------------------------------- */
+	.testi-pagine h1{
+		font-size: 5rem;
 	}
 }
