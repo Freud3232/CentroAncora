@@ -11,7 +11,7 @@
 	width: 3rem;
 }
 
-a{
+a {
 	color: var(--bs-navbar-toggler-border-color);
 }
 .navbar a {
@@ -24,7 +24,6 @@ a{
 .nav-link:hover {
 	color: var(--primary) !important;
 }
-
 
 .navbar-brand {
 	padding: 0;
@@ -46,7 +45,7 @@ background: linear-gradient(0deg, rgba(194,129,133,1) 41%, rgba(236,236,236,1) 6
 	--background: #fbd9d0;
 }
 
-.bambini .nav-link:hover{
+.bambini .nav-link:hover {
 	color: #c28378 !important;
 }
 
@@ -112,7 +111,7 @@ h3 {
 	margin-bottom: 2rem;
 }
 
-strong{
+strong {
 	color: black;
 }
 
@@ -454,7 +453,8 @@ nav {
 /* -------------------------------------------------------------------------- */
 /*                               PAGINA BAMBINI                               */
 /* -------------------------------------------------------------------------- */
-.main-bambini, .testi-pagine {
+.main-bambini,
+.testi-pagine {
 	margin-top: 5rem;
 	margin-bottom: 10rem;
 }
@@ -548,28 +548,28 @@ nav {
 	background: #c28185;
 }
 
-#titolo-adolescente{
+#titolo-adolescente {
 	font-size: 2rem;
 }
 /* -------------------------------------------------------------------------- */
 /*                                 SOTTOPAGINE                                */
 /* -------------------------------------------------------------------------- */
-.testi-pagine h1{
+.testi-pagine h1 {
 	font-size: 2rem;
 	text-align: left;
 }
 .citazione-container {
-    width: 80%;
-    margin-left: auto;
-    text-align: right;
-    padding: 10px;
+	width: 80%;
+	margin-left: auto;
+	text-align: right;
+	padding: 10px;
 	padding-right: 2rem;
-    border-right: 4px solid #e1c5aa; /* Linea di evidenziazione a sinistra */
-    font-style: italic; /* Per un effetto più citazione */
+	border-right: 4px solid #e1c5aa; /* Linea di evidenziazione a sinistra */
+	font-style: italic; /* Per un effetto più citazione */
 	margin-top: 2rem;
 	margin-bottom: 2rem;
 }
-.citazione{
+.citazione {
 	text-align: right;
 	color: #323232;
 	font-size: 1.5rem;
@@ -580,20 +580,19 @@ nav {
 	border-bottom: 1px solid #e1c5aa;
 	transition: all 0.3s;
 }
-.dropdown-menu  > .dropdown-item:last-child {
-    border-bottom: none !important;
+.dropdown-menu > .dropdown-item:last-child {
+	border-bottom: none !important;
 }
-
 
 /* -------------------------------------------------------------------------- */
 /*                                PAGINA EQUIPE                               */
 /* -------------------------------------------------------------------------- */
-#pagina-equipe{
+#pagina-equipe {
 	margin-top: 5rem;
 	margin-bottom: 10rem;
 }
 
-.membri{
+.membri {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -601,20 +600,21 @@ nav {
 	gap: 100px;
 }
 
-.membro img{
+.membro img {
 	width: 200px;
 }
 
-.membro{
+.membro {
 	position: relative;
 }
-.nome-ruolo h2{
+.nome-ruolo h2 {
 	font-size: 1.5rem;
 	margin: 0;
 }
-.nome-ruolo{
+.nome-ruolo {
 	background-color: var(--primary);
-	box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+	filter: drop-shadow(rgba(50, 50, 93, 0.25) 0px 13px 27px) drop-shadow(rgba(0, 0, 0, 0.3) 0px 8px 16px);
+	clip-path: polygon(4% 0, 100% 0, 90% 100%, 4% 90%);
 	width: 200px;
 	padding: 10px;
 	color: rgb(255, 255, 255);
@@ -624,9 +624,52 @@ nav {
 }
 
 /* -------------------------------------------------------------------------- */
+/*                                  MOVING BG                                 */
+/* -------------------------------------------------------------------------- */
+.blob-outer-container {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+	inset: 0;
+	margin: auto;
+	filter: blur(100px); 
+	opacity: 0.5;
+}
+.blob-inner-container {
+	border-radius: 99999px;
+	position: absolute;
+	inset: 0;
+	margin: auto;
+	width: 100vw;
+	height: 100vh;
+	min-width: 1000px;
+	overflow: hidden;
+	background-color: #fff;
+	transform: scale(0.8);
+}
+.blob {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	inset: 0;
+	margin: auto;
+	background: conic-gradient(from 0deg, #c28185, #f7d9bc, #d89a8f, #a97169, #fbd9d0); /*#08f, #f60, #bbffa1, #4c00ff, #ab2666, #09f)*/
+	animation: spinBlob 8s linear infinite;
+}
+@keyframes spinBlob {
+	0% {
+		transform: rotate(0deg) scale(2);
+	}
+	100% {
+		transform: rotate(1turn) scale(2);
+	}
+}
+
+/* -------------------------------------------------------------------------- */
 /*                                MEDIA QUERIES                               */
 /* -------------------------------------------------------------------------- */
-@media screen and (min-width: 576px){
+@media screen and (min-width: 576px) {
 	.card-wrapper,
 	.carta-bambini {
 		width: 200px;
@@ -634,17 +677,16 @@ nav {
 		margin-bottom: 10px; /* Remove the margin here */
 	}
 
-	#titolo-adolescente{
+	#titolo-adolescente {
 		font-size: 3rem;
 	}
 }
 
-@media screen and (min-width: 680px){
-	#titolo-adolescente{
+@media screen and (min-width: 680px) {
+	#titolo-adolescente {
 		font-size: 4rem;
 	}
 }
-
 
 @media screen and (min-width: 992px) {
 	.navbar-brand img {
@@ -658,8 +700,16 @@ nav {
 		margin-bottom: 4rem;
 	}
 	#hero {
+		/* margin-top: -5.8rem;
+		padding-top: 13rem; */
 		margin-top: 5rem;
 		margin-bottom: 10rem;
+		/* background-image: url("../img/hero-canion.jpg");
+		height: 100vh;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-attachment: fixed; */
 	}
 	p {
 		letter-spacing: 0.5px;
@@ -705,7 +755,6 @@ nav {
 		margin: auto;
 	}
 
-	
 	/* -------------------------------------------------------------------------- */
 	/*                   APRIRE IL MENU A TENDINA SENZA CLICCARE                  */
 	/* -------------------------------------------------------------------------- */
@@ -730,7 +779,7 @@ nav {
 		padding: 0.8rem 1.5rem;
 		transition: all 0.3s;
 	}
-	.dropdown-menu  > .dropdown-item:last-child {
+	.dropdown-menu > .dropdown-item:last-child {
 		border-bottom: none !important;
 	}
 
@@ -743,7 +792,7 @@ nav {
 		color: #c28378; /* Usa una variabile CSS per il colore */
 	}
 
-	#titolo-adolescente{
+	#titolo-adolescente {
 		font-size: 5rem;
 	}
 
@@ -762,7 +811,7 @@ nav {
 	/* -------------------------------------------------------------------------- */
 	/*                                 SOTTOPAGINE                                */
 	/* -------------------------------------------------------------------------- */
-	.testi-pagine h1{
+	.testi-pagine h1 {
 		font-size: 5rem;
 	}
 }
