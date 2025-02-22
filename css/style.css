@@ -1,10 +1,11 @@
 :root {
 	--text: black; /*#1d1d1d;*/
-	--background: #c28185; /*#a97169; #cd9598; -- questo secondo me è più carino*/
+	--background: #c28185;  /* #a97169; #cd9598; -- questo secondo me è più carino*/
 	--primary: #f7d9bc;
 	--primary-hover: #d89a8f;
 	--secondary: #a97169;
 	--accent: #fbd9d0;
+	--spezzare: #A7B9A8;
 }
 
 .navbar-brand img {
@@ -102,12 +103,24 @@ h1 {
 h2 {
 	font-family: "Montserrat", serif;
 	text-align: center;
-	font-weight: 400;
+	font-weight: 500;
 	margin-bottom: 1.5rem;
+}
+
+.testo > h2{
+	text-align: left;
+	margin-bottom: 1rem;
+	margin-top: 2rem;
+	font-weight: 600;
+}
+
+#servizi-adolescenti h2{
+	margin-bottom: 3rem;
+	margin-top: 4rem;
 }
 h3 {
 	font-family: "Montserrat", serif;
-	font-weight: 300;
+	font-weight: 400;
 	margin-bottom: 2rem;
 }
 
@@ -158,6 +171,11 @@ li {
 	list-style-type: none;
 }
 
+.testo li{
+	list-style-type: disc;
+	font-size: 1.25rem;
+}
+
 a {
 	text-decoration: none;
 }
@@ -184,10 +202,15 @@ section#descrizione {
 	--swiper-navigation-color: var(--primary);
 	--swiper-pagination-color: var(--primary);
 }
-.immagine-centro,
+
 .testo-centro {
 	max-width: 80vw;
 	margin: auto;
+}
+.immagine-centro{
+	width: 100vw;
+	margin-top: 3rem;
+	margin-bottom: 3rem;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -213,7 +236,7 @@ section#descrizione {
 	display: flex;
 	flex-direction: column;
 	justify-content: stretch;
-	height: 70vh;
+	min-height: 70vh;
 	overflow: hidden;
 }
 
@@ -313,7 +336,7 @@ section#descrizione {
 }
 
 /* -------------------------------------------------------------------------- */
-/*                                   EQUIPE                                   */
+/*                                   EQUIPE HOME                              */
 /* -------------------------------------------------------------------------- */
 .foto-equipe {
 	width: 150px;
@@ -459,9 +482,7 @@ nav {
 	margin-bottom: 10rem;
 }
 
-#servizi-bambini {
-	margin-top: 5rem;
-}
+
 .card-wrapper {
 	display: inline-block;
 	perspective: 1000px;
@@ -617,7 +638,7 @@ nav {
 	clip-path: polygon(4% 0, 100% 0, 90% 100%, 4% 90%);
 	width: 200px;
 	padding: 10px;
-	color: rgb(255, 255, 255);
+	color: var(--text);
 	position: absolute;
 	top: 160px;
 	left: 30px;
@@ -634,7 +655,7 @@ nav {
 	inset: 0;
 	margin: auto;
 	filter: blur(100px); 
-	opacity: 0.5;
+	opacity: 0.7;
 }
 .blob-inner-container {
 	border-radius: 99999px;
@@ -654,7 +675,8 @@ nav {
 	height: 100vh;
 	inset: 0;
 	margin: auto;
-	background: conic-gradient(from 0deg, #c28185, #f7d9bc, #d89a8f, #a97169, #fbd9d0); /*#08f, #f60, #bbffa1, #4c00ff, #ab2666, #09f)*/
+	background: conic-gradient(from 0deg, #c28185, #f7d9bc, #d89a8f, #a97169, #fbd9d0); 
+	/*#08f, #f60, #bbffa1, #4c00ff, #ab2666, #09f)*/
 	animation: spinBlob 8s linear infinite;
 }
 @keyframes spinBlob {
@@ -680,12 +702,16 @@ nav {
 	#titolo-adolescente {
 		font-size: 3rem;
 	}
+	.my-card{
+		max-width: 50%;
+	}
 }
 
 @media screen and (min-width: 680px) {
 	#titolo-adolescente {
 		font-size: 4rem;
 	}
+	
 }
 
 @media screen and (min-width: 992px) {
@@ -698,6 +724,11 @@ nav {
 	h2 {
 		margin-top: 3rem;
 		margin-bottom: 4rem;
+	}
+	.testo > h2{
+		text-align: left;
+		margin-bottom: 1rem;
+		font-weight: 600;
 	}
 	#hero {
 		/* margin-top: -5.8rem;
@@ -719,9 +750,14 @@ nav {
 		max-width: 90%;
 		flex-direction: row;
 	}
+	.immagine-centro{
+		width: 60%;
+		margin-top: 0rem;
+		margin-bottom: 0rem;
+	}
 	.my-card {
 		width: 28%;
-		height: 75vh;
+		height: 80vh;
 	}
 	.image {
 		margin-bottom: -30px;
