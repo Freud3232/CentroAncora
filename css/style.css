@@ -201,7 +201,7 @@ a {
 /*                                  IL CENTRO                                 */
 /* -------------------------------------------------------------------------- */
 /* section#descrizione {
-	background-color: #60695c !important;
+	background-color: var(--spezzare) !important;
 	padding: 2rem 0 2rem 0;
 } */
 
@@ -725,7 +725,7 @@ nav {
 }
 
 #contatti a{
-	color: #066756;
+	color: #86564e;
 	text-decoration: underline;
 }
 #map{
