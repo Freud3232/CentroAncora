@@ -1,11 +1,12 @@
 :root {
 	--text: black; /*#1d1d1d;*/
-	--background: #c28185;  /* #a97169; #cd9598; -- questo secondo me è più carino*/
+	--background: #c28185; /* #a97169; #cd9598; -- questo secondo me è più carino*/
 	--primary: #f7d9bc;
 	--primary-hover: #d89a8f;
 	--secondary: #a97169;
 	--accent: #fbd9d0;
-	--spezzare: #A7B9A8;
+	--spezzare: #60695c;
+	--spezzare-2: #066756;
 }
 
 .navbar-brand img {
@@ -47,7 +48,7 @@ background: linear-gradient(0deg, rgba(194,129,133,1) 41%, rgba(236,236,236,1) 6
 }
 
 .bambini .nav-link:hover {
-	color: #c28378 !important;
+	color: #066756 !important;
 }
 
 .adolescenti {
@@ -107,14 +108,14 @@ h2 {
 	margin-bottom: 1.5rem;
 }
 
-.testo > h2{
+.testo > h2 {
 	text-align: left;
 	margin-bottom: 1rem;
 	margin-top: 2rem;
 	font-weight: 600;
 }
 
-#servizi-adolescenti h2{
+#servizi-adolescenti h2 {
 	margin-bottom: 3rem;
 	margin-top: 4rem;
 }
@@ -155,6 +156,9 @@ strong {
 	display: inline-block;
 	transition: all 0.3s ease-in-out !important;
 	opacity: 0;
+	font-weight: 500;
+	font-size: 1.15rem;
+	letter-spacing: 1px;
 }
 
 p {
@@ -163,15 +167,20 @@ p {
 	letter-spacing: 1px;
 	font-size: 1.25rem;
 	hyphens: auto; /* Aggiunge sillabazione */
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	-ms-hyphens: auto;
 	word-wrap: break-word; /* Gestisce parole molto lunghe */
+	overflow-wrap: break-word;
+	word-break: break-word; /* Gestisce la rottura delle parole */
 }
 
 li {
-	font-family: "Cabin", sans-serif;
+	font-family: "Inter", sans-serif;
 	list-style-type: none;
 }
 
-.testo li{
+.testo li {
 	list-style-type: disc;
 	font-size: 1.25rem;
 }
@@ -191,11 +200,10 @@ a {
 /* -------------------------------------------------------------------------- */
 /*                                  IL CENTRO                                 */
 /* -------------------------------------------------------------------------- */
-section#descrizione {
-	/* max-width: 95vw; */
-	/* background-color: rgb(238, 238, 238) !important;
-	padding: 2rem 0 2rem 0; */
-}
+/* section#descrizione {
+	background-color: #60695c !important;
+	padding: 2rem 0 2rem 0;
+} */
 
 #hero-swiper {
 	--swiper-navigation-size: 33px;
@@ -207,7 +215,7 @@ section#descrizione {
 	max-width: 80vw;
 	margin: auto;
 }
-.immagine-centro{
+.immagine-centro {
 	width: 100vw;
 	margin-top: 3rem;
 	margin-bottom: 3rem;
@@ -271,7 +279,8 @@ section#descrizione {
 	padding: 0;
 }
 .my-card-text ul li {
-	margin-bottom: 5px;
+	margin-bottom: 0.3rem;
+
 	text-align: left;
 }
 
@@ -299,7 +308,10 @@ section#descrizione {
 }
 
 #bottone-carta-1 a {
+	color: #7a463e;
 	background-color: #fbd9d0;
+	font-style: italic;
+	font-size: 1.1rem;
 	/* border: 1px solid #c2a79f97; */
 }
 
@@ -310,7 +322,10 @@ section#descrizione {
 }
 
 #bottone-carta-2 a {
+	color: var(--text);
 	background-color: var(--primary-hover);
+	font-style: italic;
+	font-size: 1.1rem;
 	/* border: 1px solid #c28185bd; */
 }
 
@@ -320,7 +335,10 @@ section#descrizione {
 	transform: scale(0.98);
 }
 #bottone-carta-3 a {
+	color: var(--primary);
 	background-color: var(--secondary);
+	font-style: italic;
+	font-size: 1.1rem;
 	/* border: 1px solid #724c469e; */
 }
 #bottone-carta-3 a:hover {
@@ -341,10 +359,32 @@ section#descrizione {
 .foto-equipe {
 	width: 150px;
 	border-radius: 50%;
+	margin-bottom: 2rem;
 }
 .testo-equipe {
 	width: 80vw;
 	text-align: center;
+}
+/* #equipe{
+	background-color: ;
+} */
+
+#bottone-team-home {
+	align-self: center;
+	width: fit-content;
+	background-color: var(--primary);
+	padding: 0.5rem 2rem;
+	border-radius: 50px;
+	font-family: "Montserrat", serif;
+
+	box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+	transition: all 0.3s;
+}
+
+#bottone-team-home a {
+	color: var(--text);
+	text-align: center;
+	font-weight: 600;
 }
 /* -------------------------------------------------------------------------- */
 /*                                   FOOTER                                   */
@@ -358,7 +398,7 @@ footer p {
 
 footer {
 	margin-top: 5rem;
-	background-color: var(--primary-hover);
+	background-color: var(--background);
 }
 
 /* -------------------------------------------------------------------------- */
@@ -482,7 +522,6 @@ nav {
 	margin-bottom: 10rem;
 }
 
-
 .card-wrapper {
 	display: inline-block;
 	perspective: 1000px;
@@ -566,11 +605,15 @@ nav {
 	font-size: 1.5rem;
 	font-weight: 700;
 	color: #ffffff;
-	background: #c28185;
+	background: #066756;
 }
 
 #titolo-adolescente {
 	font-size: 2rem;
+}
+
+.adolescenti .nav-link:hover {
+    color: #fff2e6 !important;
 }
 /* -------------------------------------------------------------------------- */
 /*                                 SOTTOPAGINE                                */
@@ -608,41 +651,98 @@ nav {
 /* -------------------------------------------------------------------------- */
 /*                                PAGINA EQUIPE                               */
 /* -------------------------------------------------------------------------- */
+/* .equipe-page{
+	background-color: #efefef;
+} */
 #pagina-equipe {
 	margin-top: 5rem;
 	margin-bottom: 10rem;
 }
 
 .membri {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
-	gap: 100px;
-}
-
-.membro img {
-	width: 200px;
 }
 
 .membro {
-	position: relative;
 }
-.nome-ruolo h2 {
-	font-size: 1.5rem;
+
+.membro img {
+	width: 250px;
+	border-radius: 100px 3px 0 0;
+	box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+
+.membro img:hover {
+}
+
+.membro:hover {
+	transform: scale(1.1);
+}
+
+.membro {
+	transition: all 0.3s;
+	margin-bottom: 3rem;
+}
+
+.nome-ruolo p {
+	text-align: center;
+	font-size: 1.2rem;
 	margin: 0;
+	background-color: var(--primary);
+	padding: 1rem;
+	border-radius: 40px;
+	box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
 }
 .nome-ruolo {
-	background-color: var(--primary);
-	filter: drop-shadow(rgba(50, 50, 93, 0.25) 0px 13px 27px) drop-shadow(rgba(0, 0, 0, 0.3) 0px 8px 16px);
-	clip-path: polygon(4% 0, 100% 0, 90% 100%, 4% 90%);
-	width: 200px;
-	padding: 10px;
-	color: var(--text);
-	position: absolute;
-	top: 160px;
-	left: 30px;
+	min-width: 300px;
 }
+
+
+/* -------------------------------------------------------------------------- */
+/*                               PAGINA CONTATTI                              */
+/* -------------------------------------------------------------------------- */
+.pagina-contatti{
+	background-color: var(--primary);
+}
+.pagina-contatti footer{
+	display: none;
+}
+.pagina-contatti .nav-link:hover {
+    color: #066756 !important;
+}
+#contatti{
+	margin-top: 5rem;
+	margin-bottom: 10rem;
+}
+
+#contatti p{
+	text-align: left;
+}
+
+#contatti h2{
+	text-align: left;
+	font-weight: 800;
+	margin-bottom: 2rem;
+}
+
+#contatti a{
+	color: #066756;
+	text-decoration: underline;
+}
+#map{
+	border-radius: 20px;
+	height: 400px;
+	width: 100%;
+	margin: auto;
+}
+
+.sezione-mappa{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
 
 /* -------------------------------------------------------------------------- */
 /*                                  MOVING BG                                 */
@@ -654,7 +754,7 @@ nav {
 	z-index: -1;
 	inset: 0;
 	margin: auto;
-	filter: blur(100px); 
+	filter: blur(100px);
 	opacity: 0.7;
 }
 .blob-inner-container {
@@ -675,7 +775,7 @@ nav {
 	height: 100vh;
 	inset: 0;
 	margin: auto;
-	background: conic-gradient(from 0deg, #c28185, #f7d9bc, #d89a8f, #a97169, #fbd9d0); 
+	background: conic-gradient(from 0deg, #c28185, #f7d9bc, #d89a8f, #a97169, #fbd9d0);
 	/*#08f, #f60, #bbffa1, #4c00ff, #ab2666, #09f)*/
 	animation: spinBlob 8s linear infinite;
 }
@@ -692,6 +792,11 @@ nav {
 /*                                MEDIA QUERIES                               */
 /* -------------------------------------------------------------------------- */
 @media screen and (min-width: 576px) {
+	p {
+		letter-spacing: 0.5px;
+		font-size: 1.25rem;
+		text-align: justify;
+	}
 	.card-wrapper,
 	.carta-bambini {
 		width: 200px;
@@ -702,7 +807,7 @@ nav {
 	#titolo-adolescente {
 		font-size: 3rem;
 	}
-	.my-card{
+	.my-card {
 		max-width: 50%;
 	}
 }
@@ -711,7 +816,6 @@ nav {
 	#titolo-adolescente {
 		font-size: 4rem;
 	}
-	
 }
 
 @media screen and (min-width: 992px) {
@@ -725,7 +829,7 @@ nav {
 		margin-top: 3rem;
 		margin-bottom: 4rem;
 	}
-	.testo > h2{
+	.testo > h2 {
 		text-align: left;
 		margin-bottom: 1rem;
 		font-weight: 600;
@@ -742,18 +846,19 @@ nav {
 		background-position: center center;
 		background-attachment: fixed; */
 	}
-	p {
-		letter-spacing: 0.5px;
-		font-size: 1.25rem;
-	}
+
 	.my-container {
 		max-width: 90%;
 		flex-direction: row;
 	}
-	.immagine-centro{
+	.immagine-centro {
 		width: 60%;
 		margin-top: 0rem;
 		margin-bottom: 0rem;
+	}
+	.testo-centro {
+		margin: 0rem 0 0 auto;
+		/* margin-left: auto; */
 	}
 	.my-card {
 		width: 28%;
@@ -825,7 +930,14 @@ nav {
 	}
 
 	.bambini .nav-item.dropdown:hover .dropdown-toggle {
-		color: #c28378; /* Usa una variabile CSS per il colore */
+		color: #066756; /* Usa una variabile CSS per il colore */
+	}
+	.adolescenti .nav-item.dropdown:hover .dropdown-toggle {
+		color: #ffead6; /* Usa una variabile CSS per il colore */
+	}
+
+	.pagina-contatti .nav-item.dropdown:hover .dropdown-toggle{
+		color: #066756;
 	}
 
 	#titolo-adolescente {
