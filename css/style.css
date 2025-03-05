@@ -615,6 +615,11 @@ nav {
 .adolescenti .nav-link:hover {
     color: #fff2e6 !important;
 }
+
+.testo-bambini h2{
+	text-align: left;
+	font-weight: 600;
+}
 /* -------------------------------------------------------------------------- */
 /*                                 SOTTOPAGINE                                */
 /* -------------------------------------------------------------------------- */
