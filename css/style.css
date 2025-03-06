@@ -1,6 +1,6 @@
 :root {
 	--text: black; /*#1d1d1d;*/
-	--background: #c28185; /* #a97169; #cd9598; -- questo secondo me è più carino*/
+	--background: #c08284; /* #a97169; #cd9598; -- questo secondo me è più carino*/
 	--primary: #f7d9bc;
 	--primary-hover: #d89a8f;
 	--secondary: #a97169;
@@ -48,7 +48,7 @@ background: linear-gradient(0deg, rgba(194,129,133,1) 41%, rgba(236,236,236,1) 6
 }
 
 .bambini .nav-link:hover {
-	color: #066756 !important;
+	color: #c28185 !important;
 }
 
 .adolescenti {
@@ -123,6 +123,12 @@ h3 {
 	font-family: "Montserrat", serif;
 	font-weight: 400;
 	margin-bottom: 2rem;
+	color: var(--text);
+}
+h4 {
+	font-family: "Montserrat", serif;
+	color: #3d3d3d;
+	font-weight: 400;
 }
 
 strong {
@@ -221,6 +227,9 @@ a {
 	margin-bottom: 3rem;
 }
 
+#citazione-home {
+	margin-right: 1rem;
+}
 /* -------------------------------------------------------------------------- */
 /*                                    CARD                                    */
 /* -------------------------------------------------------------------------- */
@@ -359,11 +368,15 @@ a {
 .foto-equipe {
 	width: 150px;
 	border-radius: 50%;
-	margin-bottom: 2rem;
+	margin-bottom: 1rem;
 }
 .testo-equipe {
 	width: 80vw;
 	text-align: center;
+}
+.testo-equipe p {
+	text-align: center;
+	margin-bottom: 2rem;
 }
 /* #equipe{
 	background-color: ;
@@ -384,7 +397,7 @@ a {
 #bottone-team-home a {
 	color: var(--text);
 	text-align: center;
-	font-weight: 600;
+	font-weight: 500;
 }
 /* -------------------------------------------------------------------------- */
 /*                                   FOOTER                                   */
@@ -605,7 +618,7 @@ nav {
 	font-size: 1.5rem;
 	font-weight: 700;
 	color: #ffffff;
-	background: #066756;
+	background: #c28185;
 }
 
 #titolo-adolescente {
@@ -613,10 +626,10 @@ nav {
 }
 
 .adolescenti .nav-link:hover {
-    color: #fff2e6 !important;
+	color: #fff2e6 !important;
 }
 
-.testo-bambini h2{
+.testo-bambini h2 {
 	text-align: left;
 	font-weight: 600;
 }
@@ -701,53 +714,50 @@ nav {
 	min-width: 300px;
 }
 
-
 /* -------------------------------------------------------------------------- */
 /*                               PAGINA CONTATTI                              */
 /* -------------------------------------------------------------------------- */
-.pagina-contatti{
+.pagina-contatti {
 	background-color: var(--primary);
 }
-.pagina-contatti footer{
+.pagina-contatti footer {
 	display: none;
 }
 .pagina-contatti .nav-link:hover {
-    color: #066756 !important;
+	color: #86564e !important;
 }
-#contatti{
+#contatti {
 	margin-top: 5rem;
 	margin-bottom: 10rem;
 }
 
-#contatti p{
+#contatti p {
 	text-align: left;
 }
 
-#contatti h2{
+#contatti h2 {
 	text-align: left;
 	font-weight: 800;
 	margin-bottom: 2rem;
 }
 
-#contatti a{
+#contatti a {
 	color: #86564e;
 	text-decoration: underline;
 }
-#map{
+#map {
 	border-radius: 20px;
 	height: 400px;
 	width: 100%;
 	margin: auto;
 }
 
-.sezione-mappa{
+.sezione-mappa {
 	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
-
-
 
 /* -------------------------------------------------------------------------- */
 /*                                  MOVING BG                                 */
@@ -829,10 +839,15 @@ nav {
 	}
 	h1 {
 		font-size: 5rem;
+		font-weight: 700;
 	}
 	h2 {
 		margin-top: 3rem;
 		margin-bottom: 4rem;
+		font-weight: 600;
+	}
+	h3 {
+		font-weight: 600;
 	}
 	.testo > h2 {
 		text-align: left;
@@ -840,16 +855,25 @@ nav {
 		font-weight: 600;
 	}
 	#hero {
-		/* margin-top: -5.8rem;
-		padding-top: 13rem; */
-		margin-top: 5rem;
-		margin-bottom: 10rem;
-		/* background-image: url("../img/hero-canion.jpg");
-		height: 100vh;
+		/* margin-top: 5rem;
+		margin-bottom: 10rem; */
+		margin-top: -5.8rem;
+		padding-top: 11rem;
+		padding-bottom: 1rem;
+		/* padding-top: 3rem; */
+		background-image: url("../img/quadro_senzaSfondo2.png");
+		min-height: 120vh;
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center center;
-		background-attachment: fixed; */
+		background-attachment: fixed;
+		clip-path: polygon(0 0, 100% 0, 100% 73%, 0% 100%);
+	}
+	#descrizione {
+		/* background: rgb(194,129,133);
+background: linear-gradient(180deg, rgba(194,129,133,0) 0%, rgba(193,130,132,0.40948879551820727) 15%, rgba(193,130,132,0.6531862745098039) 25%, rgba(193,130,132,0.8688725490196079) 52%, rgba(192,130,132,1) 94%, rgba(192,130,132,1) 94%);
+		margin-top: 0;
+		padding-top: 2rem; */
 	}
 
 	.my-container {
@@ -857,7 +881,8 @@ nav {
 		flex-direction: row;
 	}
 	.immagine-centro {
-		width: 60%;
+		position: relative;
+		width: 30%;
 		margin-top: 0rem;
 		margin-bottom: 0rem;
 	}
@@ -865,6 +890,34 @@ nav {
 		margin: 0rem 0 0 auto;
 		/* margin-left: auto; */
 	}
+
+	/* #citazione-home {
+		position: absolute;
+		top: 197px;
+		left: 140px;
+		z-index: 1;
+		background: rgba(55, 55, 55, 0.275);
+		color: #d2d0b9;
+		padding: 2.3rem;
+		display: none;
+	}
+	#citazione-home .citazione {
+		color: #e8e6d0;
+	} */
+	/* @keyframes slideInLeft {
+		from {
+			transform: translateY(+200px);
+		}
+
+		to {
+			transform: translate(0);
+		}
+	}
+
+	.immagine-centro:hover #citazione-home {
+		display: block;
+		animation: slideInLeft 1s;
+	} */
 	.my-card {
 		width: 28%;
 		height: 80vh;
@@ -935,14 +988,14 @@ nav {
 	}
 
 	.bambini .nav-item.dropdown:hover .dropdown-toggle {
-		color: #066756; /* Usa una variabile CSS per il colore */
+		color: #c28185; /* Usa una variabile CSS per il colore */
 	}
 	.adolescenti .nav-item.dropdown:hover .dropdown-toggle {
 		color: #ffead6; /* Usa una variabile CSS per il colore */
 	}
 
-	.pagina-contatti .nav-item.dropdown:hover .dropdown-toggle{
-		color: #066756;
+	.pagina-contatti .nav-item.dropdown:hover .dropdown-toggle {
+		color: #c28185;
 	}
 
 	#titolo-adolescente {

@@ -64,15 +64,15 @@
 		</nav>
 
 
-		<div class="blob-outer-container">
+		<!-- <div class="blob-outer-container">
 			<div class="blob-inner-container">
 				<div class="blob"></div>
 			</div>
-		</div>
+		</div> -->
 		
 
-		<section id="hero" >
-			<div class="container">
+		<section id="hero">
+			<div class="container" >
 				<h1 class="mt-5">CENTRO ANCORA</h1>
 				<h2>Centro di Psicologia e Pedagogia</h2>
 				<h3>Hai bisogno di supporto?</h3>
@@ -85,15 +85,31 @@
 		<!-- DESCRIZIONE -->
 		<section id="descrizione">
 			<div class="container my-5">
-				<div class="row flex-column-reverse flex-lg-row g-md-5 my-md-5">
-					<div class="col-lg-4 testo-centro">
+				<div class="row flex-column-reverse flex-lg-row g-md-2 my-md-5">
+					<div class="col-lg-5 testo-centro">
 						<p>Il <strong>Centro Ancora</strong> nasce dalla volontà di costruire uno <strong>spazio di cura</strong> del <strong>bambino</strong>, dell’<strong>adolescente</strong>, dell’<strong>adulto</strong> e della <strong>famiglia</strong> che si trovano ad affrontare periodi di difficoltà nelle tappe del ciclo di vita.</p>
 						<p>Ogni percorso è costruito a partire dall’<strong>unicità del singolo</strong> e dai suoi bisogni specifici.</p>
 						<p>Il nostro approccio ha come scopo la volontà di <strong>accompagnare il soggetto</strong> verso la riscoperta delle sue <strong>risorse interne</strong> e delle sue <strong>potenzialità</strong> che potranno emergere ed essere implementate per curarsi delle fragilità.</p>
 					</div>
 
-					<div class="col-lg-8 immagine-centro">
-						<div class="swiper" id="hero-swiper">
+					<div class="col-lg-3 immagine-centro">
+						<picture >
+							<!-- Immagine per schermi più piccoli (mobile) -->
+							<source style="width: 100%;" srcset="img/quadro_vert.jpg" media="(max-width: 768px)">
+							
+							<!-- Immagine per schermi più grandi (desktop) -->
+							<!-- <source style="width: 100%;" srcset="img/quadro1.jpg" media="(min-width: 769px)"> -->
+							
+							<!-- Immagine di fallback per browser che non supportano <picture> -->
+							<!-- <img style="width: 100%;" src="img/quadro1.jpg" alt="Immagine adattiva"> -->
+						</picture>
+						<div id="citazione-home" class="citazione-container">
+							<p class="citazione">"Ognuno deve cercare a modo suo, ognuno
+								deve fare il proprio cammino, perché uno
+								stesso posto può significare cose diverse a
+								seconda di chi lo visita."</p>
+						</div>
+						<!-- <div class="swiper" id="hero-swiper">
 							<div class="swiper-wrapper">
 								<div class="swiper-slide">
 									<img src="img/IMG_sala-attesa-ozz.jpg" alt="Interno centro 1" class="img-fluid" />
@@ -107,12 +123,6 @@
 								<div class="swiper-slide">
 									<img src="img/interniCentroAncora.jpg" alt="Interno centro 4" class="img-fluid" />
 								</div>
-								<!-- <div class="swiper-slide">
-									<img src="https://picsum.photos/1920/1080?random=15" alt="" class="img-fluid" />
-								</div>
-								<div class="swiper-slide">
-									<img src="https://picsum.photos/1920/1080?random=16" alt="" class="img-fluid" />
-								</div> -->
 							</div>
 
 							<div class="swiper-pagination"></div>
@@ -120,7 +130,7 @@
 							<div class="swiper-button-prev"></div>
 							<div class="swiper-button-next"></div>
 							<div class="swiper-scrollbar"></div>
-						</div>
+						</div> -->
 					</div>
 				</div>
 			</div>
@@ -192,7 +202,7 @@
 						<ul>
 							<li>&#10004 Valutazione e Riabilitazione DSA</li>
 							<li>&#10004 Metodo di Studio</li>
-							<li>&#10004 Psicoterapia al bambino</li>
+							<li>&#10004 Psicoterapia</li>
 							<li>&#10004 Logopedia</li>
 							<li>&#10004 Arteterapia e Danzaterapia</li>
 							<li>&#10004 Nutrizione</li>
@@ -213,11 +223,11 @@
 						<ul>
 							<li>&#10004 Certificazione DSA o Rinnovo</li>
 							<li>&#10004 Metodo di Studio</li>
+							<li>&#10004 Psicoterapia</li>
 							<li>&#10004 Consultazione Neuropsichiatrica</li>
-							<li>&#10004 Psicoterapia individuale</li>
 							<li>&#10004 Nutrizione</li>
 							<li>&#10004 Osteopatia</li>
-							<li>&#10004 Arteterapia e danzaterapia</li>
+							<li>&#10004 Orientamento alle scelte scolastiche</li>
 						</ul>
 					</div>
 					<div class="margine-bottone-carta" id="bottone-carta-2">
@@ -252,8 +262,9 @@
 				<div class="row d-flex flex-column justify-content-center align-items-center">
 					<img class="foto-equipe" src="img/Giulia-Lomonaco.jpg" alt="Giulia Lo Monaco" />
 					<div class="testo-equipe">
+						<h4>Direttrice del centro</h4>
 						<h3>Dott.ssa Giulia Lo Monaco</h3>
-						<p>Specializzata in <strong>disturbi dell’apprendimento</strong>. Mediatrice familiare e <strong>riabilitatrice Feuerstein</strong> con formazione psicomotoria funzionale.</p>
+						<p>Psicopedagogista clinica esperta in <strong>Dsa</strong>, <strong>supporto emotivo</strong> e <strong>consulenza alla genitorialità</strong>.</p>
 					</div>
 					<div id="bottone-team-home" class="btn-primary">
 						<a  href="chi-siamo.html">Vieni a conoscere il Team</a>
@@ -280,7 +291,7 @@
 
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-		<script>
+		<!-- <script>
 			/* -------------------------------------------------------------------------- */
 			/*                                   SWIPER                                   */
 			/* -------------------------------------------------------------------------- */
@@ -302,7 +313,7 @@
 					prevEl: ".swiper-button-prev",
 				},
 			})
-		</script>
+		</script> -->
 		<script src="js/script.js"></script>
 	</body>
 </html>
