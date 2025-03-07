@@ -1,44 +1,14 @@
 /* -------------------------------------------------------------------------- */
 /*                            ANIMAZIONE HAMBURGER                            */
 /* -------------------------------------------------------------------------- */
+let navbarAperta = false;
 document.querySelector(".first-button").addEventListener("click", function () {
-	document.querySelector(".animated-icon1").classList.toggle("open")
+	document.querySelector(".animated-icon1").classList.toggle("open");
+    navbarAperta = !navbarAperta;
+    if(window.scrollY <= 150 ) {
+        document.querySelector("nav").classList.toggle("navbar-scrolled");
+    }
 })
-
-/* -------------------------------------------------------------------------- */
-/*                         NAVBAR OPACA QUANDO SCENDE                         */
-/* -------------------------------------------------------------------------- */
-// document.addEventListener("DOMContentLoaded", () => {
-// 	const navbar = document.getElementById("myNav")
-// 	const toggleButton = document.querySelector(".navbar-toggler")
-// 	const collapse = document.getElementById("navbarSupportedContent")
-
-// 	// Funzione per aggiornare la classe della navbar durante lo scroll
-// 	function handleScroll() {
-// 		if (window.scrollY > 50) {
-// 			navbar.classList.add("scrolled")
-// 		} else {
-// 			navbar.classList.remove("scrolled")
-// 		}
-// 	}
-
-// 	// Funzione per aggiornare la classe della navbar quando il menu si apre o si chiude
-// 	function updateNavbarBackground() {
-// 		if (collapse.classList.contains("show")) {
-// 			navbar.classList.add("scrolled")
-// 		} else {
-// 			handleScroll() // Ripristina lo stato della navbar in base allo scroll
-// 		}
-// 	}
-
-// 	// Ascolta i click sul pulsante toggle
-// 	toggleButton.addEventListener("click", () => {
-// 		setTimeout(updateNavbarBackground, 100) // Aspetta che il menu si apra/chiuda
-// 	})
-
-// 	// Ascolta l'evento scroll
-// 	window.addEventListener("scroll", handleScroll)
-// })
 
 /* -------------------------------------------------------------------------- */
 /*                            TITOLI CHE COMPAIONO                            */
@@ -101,24 +71,26 @@ window.addEventListener('scroll', function () {
         navbar.classList.add('navbar-scrolled');
         navbar.classList.remove('bg-transparent');
         navbarToggler.classList.add('shrink-button'); // Rimpicciolisce il bottone
-        logo.classList.add("logo-scrolled");
-        burger.forEach(element => {
-            element.style.background = "#f7d9bc";
-        });
-        items.forEach(element => {
-            element.classList.add("item-scrolled");
-        });
+        // logo.classList.add("logo-scrolled");
+        // burger.forEach(element => {
+        //     element.style.background = "#f7d9bc";
+        // });
+        // items.forEach(element => {
+        //     element.classList.add("item-scrolled");
+        // });
     } else {
-        navbar.classList.remove('navbar-scrolled');
+        if(!navbarAperta){
+            navbar.classList.remove('navbar-scrolled');
+        }
         navbar.classList.add('bg-transparent');
         navbarToggler.classList.remove('shrink-button'); // Ripristina la dimensione
-        logo.classList.remove("logo-scrolled");
-        burger.forEach(element => {
-            element.style.background = "#1d1d1d";
-        });
-        items.forEach(element => {
-            element.classList.remove("item-scrolled");
-        });
+        // logo.classList.remove("logo-scrolled");
+        // burger.forEach(element => {
+        //     element.style.background = "#1d1d1d";
+        // });
+        // items.forEach(element => {
+        //     element.classList.remove("item-scrolled");
+        // });
     }
 
     lastScrollY = window.scrollY;

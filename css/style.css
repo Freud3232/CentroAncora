@@ -23,13 +23,21 @@ a {
 	letter-spacing: 2px;
 }
 
-.nav-link:hover {
+.nav-link{
+	transition: all 0.3s;
+}
+
+.nav-link.show{
 	color: var(--primary) !important;
 }
+
+
 
 .navbar-brand {
 	padding: 0;
 }
+
+
 /* -------------------------------------------------------------------------- */
 /*                                SFONDI PAGINE                               */
 /* -------------------------------------------------------------------------- */
@@ -38,18 +46,13 @@ body {
 	background-color: var(--background);
 }
 
-/* .home {
-	background: rgb(194,129,133);
-background: linear-gradient(0deg, rgba(194,129,133,1) 41%, rgba(236,236,236,1) 60%, rgba(194,129,133,1) 75%);
-} */
+
 
 .bambini {
 	--background: #fbd9d0;
 }
 
-.bambini .nav-link:hover {
-	color: #c28185 !important;
-}
+
 
 .adolescenti {
 	--background: #d89a8f;
@@ -62,17 +65,7 @@ background: linear-gradient(0deg, rgba(194,129,133,1) 41%, rgba(236,236,236,1) 6
 .text-center a {
 	font-size: 0.9rem;
 }
-/* .my-container {
-	width: 80%;
-	margin: auto;
-} 
- 
-#myNav {
-	background-color: #ffffff2d !important;
-	backdrop-filter: blur(10px) !important; 
-	opacity: 20px;
-	background-color: transparent;
-} */
+
 /* -------------------------------------------------------------------------- */
 /*                                    INDEX                                   */
 /* -------------------------------------------------------------------------- */
@@ -96,16 +89,18 @@ h1 {
 	font-size: 3.5rem;
 	letter-spacing: 5px;
 	font-optical-sizing: auto;
-	font-weight: 500;
+	font-weight: 600;
 	margin-bottom: 2rem;
+	/* margin-top: 8rem; */
 	color: var(--text);
 }
 
 h2 {
 	font-family: "Montserrat", serif;
 	text-align: center;
-	font-weight: 500;
+	font-weight: 600;
 	margin-bottom: 1.5rem;
+	margin-top: 3rem;
 }
 
 .testo > h2 {
@@ -211,6 +206,25 @@ a {
 	padding: 2rem 0 2rem 0;
 } */
 
+#hero {
+	min-height: 100vh;
+	padding-top: 6rem; /* Add padding equal to navbar height instead of negative margin */
+	padding-bottom: 1rem;
+	background-image: url("../img/quadro_vert.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	position: relative; /* Add this */
+}
+
+.navbar {
+	position: fixed; /* Change from sticky-top to fixed */
+	width: 100%;
+	z-index: 1030; /* Ensure navbar stays on top */
+	background-color: transparent; /* Keep transparency */
+}
+
 #hero-swiper {
 	--swiper-navigation-size: 33px;
 	--swiper-navigation-color: var(--primary);
@@ -229,6 +243,7 @@ a {
 
 #citazione-home {
 	margin-right: 1rem;
+	background-image: url();
 }
 /* -------------------------------------------------------------------------- */
 /*                                    CARD                                    */
@@ -509,7 +524,9 @@ footer {
 /*                               NAVBAR SCROLLED                              */
 /* -------------------------------------------------------------------------- */
 .navbar-scrolled {
-	background-color: rgba(0, 0, 0, 0.584) !important;
+	/* background-color: rgba(0, 0, 0, 0.584) !important; */
+	background-color: rgba(255, 255, 255, 0.1); /* Trasparente inizialmente */
+	backdrop-filter: blur(10px); /* Effetto vetro */
 	--bs-navbar-padding-y: 0rem;
 }
 
@@ -625,9 +642,7 @@ nav {
 	font-size: 2rem;
 }
 
-.adolescenti .nav-link:hover {
-	color: #fff2e6 !important;
-}
+
 
 .testo-bambini h2 {
 	text-align: left;
@@ -639,6 +654,7 @@ nav {
 .testi-pagine h1 {
 	font-size: 2rem;
 	text-align: left;
+	margin-top: 10rem;
 }
 .citazione-container {
 	width: 80%;
@@ -677,10 +693,8 @@ nav {
 	margin-bottom: 10rem;
 }
 
-.membri {
-}
-
-.membro {
+.equipe-page h1{
+	margin-top: 8rem;
 }
 
 .membro img {
@@ -723,11 +737,9 @@ nav {
 .pagina-contatti footer {
 	display: none;
 }
-.pagina-contatti .nav-link:hover {
-	color: #86564e !important;
-}
+
 #contatti {
-	margin-top: 5rem;
+	margin-top: 12rem;
 	margin-bottom: 10rem;
 }
 
@@ -837,10 +849,23 @@ nav {
 	.navbar-brand img {
 		width: 4rem;
 	}
+	.nav-link:hover {
+		color: var(--primary) !important;
+	}
+	.pagina-contatti .nav-link:hover {
+		color: #86564e !important;
+	}
+	.adolescenti .nav-link:hover {
+		color: #fff2e6 !important;
+	}
+	.bambini .nav-link:hover {
+		color: #c28185 !important;
+	}
 	h1 {
 		font-size: 5rem;
-		font-weight: 700;
+		font-weight: 500;
 	}
+
 	h2 {
 		margin-top: 3rem;
 		margin-bottom: 4rem;
@@ -855,25 +880,18 @@ nav {
 		font-weight: 600;
 	}
 	#hero {
-		/* margin-top: 5rem;
-		margin-bottom: 10rem; */
-		margin-top: -5.8rem;
-		padding-top: 11rem;
+		min-height: 100vh;
+		padding-top: 5.8rem; /* Add padding equal to navbar height instead of negative margin */
 		padding-bottom: 1rem;
-		/* padding-top: 3rem; */
-		background-image: url("../img/quadro_senzaSfondo2.png");
-		min-height: 120vh;
+		background-image: url("../img/quadro1.jpg");
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center center;
 		background-attachment: fixed;
-		clip-path: polygon(0 0, 100% 0, 100% 73%, 0% 100%);
+		position: relative; /* Add this */
 	}
 	#descrizione {
-		/* background: rgb(194,129,133);
-background: linear-gradient(180deg, rgba(194,129,133,0) 0%, rgba(193,130,132,0.40948879551820727) 15%, rgba(193,130,132,0.6531862745098039) 25%, rgba(193,130,132,0.8688725490196079) 52%, rgba(192,130,132,1) 94%, rgba(192,130,132,1) 94%);
-		margin-top: 0;
-		padding-top: 2rem; */
+		margin-top: 5rem;
 	}
 
 	.my-container {
@@ -954,6 +972,8 @@ background: linear-gradient(180deg, rgba(194,129,133,0) 0%, rgba(193,130,132,0.4
 		margin: auto;
 	}
 
+	
+
 	/* -------------------------------------------------------------------------- */
 	/*                   APRIRE IL MENU A TENDINA SENZA CLICCARE                  */
 	/* -------------------------------------------------------------------------- */
@@ -1014,10 +1034,21 @@ background: linear-gradient(180deg, rgba(194,129,133,0) 0%, rgba(193,130,132,0.4
 		border-radius: 5px;
 	}
 
+
+	.main-bambini h1{
+		margin-top: 10rem;
+	}
 	/* -------------------------------------------------------------------------- */
 	/*                                 SOTTOPAGINE                                */
 	/* -------------------------------------------------------------------------- */
 	.testi-pagine h1 {
 		font-size: 5rem;
+	}
+
+	/* -------------------------------------------------------------------------- */
+	/*                                   EQUIPE                                   */
+	/* -------------------------------------------------------------------------- */
+	.equipe-page h1{
+		margin-top: 10rem;
 	}
 }
