@@ -23,20 +23,17 @@ a {
 	letter-spacing: 2px;
 }
 
-.nav-link{
+.nav-link {
 	transition: all 0.3s;
 }
 
-.nav-link.show{
+.nav-link.show {
 	color: var(--primary) !important;
 }
-
-
 
 .navbar-brand {
 	padding: 0;
 }
-
 
 /* -------------------------------------------------------------------------- */
 /*                                SFONDI PAGINE                               */
@@ -46,13 +43,9 @@ body {
 	background-color: var(--background);
 }
 
-
-
 .bambini {
 	--background: #fbd9d0;
 }
-
-
 
 .adolescenti {
 	--background: #d89a8f;
@@ -580,10 +573,26 @@ nav {
 .card-wrapper.flip-right .carta-bambini .back {
 	transform: rotateY(180deg);
 }
-.card-wrapper:hover .carta-bambini,
+/* .card-wrapper:hover .carta-bambini,
 .card-wrapper.flip-right:hover .carta-bambini {
 	transform: rotateY(180deg);
+} */
+/* 
+	Per mobile si gira al tocco e si rigira toccando di nuovo 
+	vedi JS
+*/
+.card-wrapper.flipped .carta-bambini,
+.card-wrapper.flip-right.flipped .carta-bambini {
+  transform: rotateY(180deg);
 }
+
+/* Per dispositivi che hanno l'hover (mouse) */
+@media (hover: hover) {
+	.card-wrapper:hover .carta-bambini,
+	.card-wrapper.flip-right:hover .carta-bambini {
+	  transform: rotateY(180deg);
+	}
+  }
 
 .card-wrapper,
 .carta-bambini {
@@ -642,8 +651,6 @@ nav {
 	font-size: 2rem;
 }
 
-
-
 .testo-bambini h2 {
 	text-align: left;
 	font-weight: 600;
@@ -693,7 +700,7 @@ nav {
 	margin-bottom: 10rem;
 }
 
-.equipe-page h1{
+.equipe-page h1 {
 	margin-top: 8rem;
 }
 
@@ -722,10 +729,25 @@ nav {
 	background-color: var(--primary);
 	padding: 1rem;
 	border-radius: 40px;
-	box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+	/* box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0); */
+	/* box-shadow: 2px 5px 3px -4px #000000; */
 }
 .nome-ruolo {
 	min-width: 300px;
+}
+
+.ruolo {
+	background-color: #d89a8f;
+	padding: 0.5rem 2rem 0 1rem;
+	width: 250px;
+	z-index: -10;
+	border-radius: 0 0 80px 3px;
+	box-shadow: -5px 5px 28px -12px #000000;
+}
+
+.ruolo p {
+	text-align: center;
+	font-size: 1.2rem;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -733,9 +755,6 @@ nav {
 /* -------------------------------------------------------------------------- */
 .pagina-contatti {
 	background-color: var(--primary);
-}
-.pagina-contatti footer {
-	display: none;
 }
 
 #contatti {
@@ -756,6 +775,7 @@ nav {
 #contatti a {
 	color: #86564e;
 	text-decoration: underline;
+	font-weight: 600;
 }
 #map {
 	border-radius: 20px;
@@ -872,7 +892,7 @@ nav {
 		font-weight: 600;
 	}
 	h3 {
-		font-weight: 600;
+		font-weight: 500;
 	}
 	.testo > h2 {
 		text-align: left;
@@ -881,7 +901,7 @@ nav {
 	}
 	#hero {
 		min-height: 100vh;
-		padding-top: 5.8rem; /* Add padding equal to navbar height instead of negative margin */
+		padding-top: 9rem; /* Add padding equal to navbar height instead of negative margin */
 		padding-bottom: 1rem;
 		background-image: url("../img/quadro1.jpg");
 		background-size: cover;
@@ -972,8 +992,6 @@ nav {
 		margin: auto;
 	}
 
-	
-
 	/* -------------------------------------------------------------------------- */
 	/*                   APRIRE IL MENU A TENDINA SENZA CLICCARE                  */
 	/* -------------------------------------------------------------------------- */
@@ -1034,8 +1052,7 @@ nav {
 		border-radius: 5px;
 	}
 
-
-	.main-bambini h1{
+	.main-bambini h1 {
 		margin-top: 10rem;
 	}
 	/* -------------------------------------------------------------------------- */
@@ -1048,7 +1065,7 @@ nav {
 	/* -------------------------------------------------------------------------- */
 	/*                                   EQUIPE                                   */
 	/* -------------------------------------------------------------------------- */
-	.equipe-page h1{
+	.equipe-page h1 {
 		margin-top: 10rem;
 	}
 }

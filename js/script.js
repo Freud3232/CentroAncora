@@ -95,3 +95,49 @@ window.addEventListener('scroll', function () {
 
     lastScrollY = window.scrollY;
 });
+
+
+/* -------------------------------------------------------------------------- */
+/*                          CARTA CHE GIRA DA MOBILE                          */
+/* -------------------------------------------------------------------------- */
+// document.addEventListener("DOMContentLoaded", function () {
+//     const cards = document.querySelectorAll(".card-wrapper .carta-bambini");
+
+//     cards.forEach(card => {
+//         card.addEventListener("click", function () {
+//             card.classList.toggle("flip-right");
+//             console.log("flip");
+//         });
+//     });
+// });
+document.addEventListener('DOMContentLoaded', function() {
+    // Seleziona tutti i wrapper delle carte
+    const cardWrappers = document.querySelectorAll('.card-wrapper');
+    
+    // Per ogni wrapper aggiungi un event listener per il click/tocco
+    cardWrappers.forEach(wrapper => {
+      wrapper.addEventListener('click', function(e) {
+        // Controlla se il click è avvenuto su un link o su un elemento figlio di un link
+        if (e.target.tagName === 'A' || e.target.closest('a')) {
+          // Non fare nulla, lascia che il comportamento predefinito del link funzioni
+          return;
+        } else {
+          // Altrimenti, gira la carta
+          this.classList.toggle('flipped');
+        }
+      });
+      
+      // Per i dispositivi touch
+      wrapper.addEventListener('touchstart', function(e) {
+        // Controlla se il tocco è avvenuto su un link o su un elemento figlio di un link
+        if (e.target.tagName === 'A' || e.target.closest('a')) {
+          // Non prevenire il comportamento predefinito per i link
+          return;
+        } else {
+          // Solo per altri elementi, previeni il comportamento predefinito e gira la carta
+          e.preventDefault();
+          this.classList.toggle('flipped');
+        }
+      }, { passive: false });
+    });
+  });
