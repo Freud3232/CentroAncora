@@ -539,6 +539,9 @@ nav {
 /* -------------------------------------------------------------------------- */
 /*                               PAGINA BAMBINI                               */
 /* -------------------------------------------------------------------------- */
+#servizi-adolescenti{
+	max-width: 80%;
+}
 .main-bambini,
 .testi-pagine {
 	margin-top: 5rem;
@@ -555,6 +558,7 @@ nav {
 	transition-duration: 0.6s;
 	transition-timing-function: ease-in-out;
 	transform-style: preserve-3d;
+	
 }
 .card-wrapper .carta-bambini .front,
 .card-wrapper .carta-bambini .back {
@@ -586,19 +590,12 @@ nav {
   transform: rotateY(180deg);
 }
 
-/* Per dispositivi che hanno l'hover (mouse) */
-@media (hover: hover) {
-	.card-wrapper:hover .carta-bambini,
-	.card-wrapper.flip-right:hover .carta-bambini {
-	  transform: rotateY(180deg);
-	}
-  }
 
 .card-wrapper,
 .carta-bambini {
 	width: 400px;
 	height: 200px;
-	margin-bottom: 10px; /* Remove the margin here */
+	margin-bottom: .5rem; /* Remove the margin here */
 }
 
 /* Add a new class to handle the spacing through the Bootstrap column */
@@ -648,7 +645,10 @@ nav {
 }
 
 #titolo-adolescente {
+	margin-top: 8rem;
+	text-align: center;
 	font-size: 2rem;
+	hyphens: auto
 }
 
 .testo-bambini h2 {
@@ -701,7 +701,8 @@ nav {
 }
 
 .equipe-page h1 {
-	margin-top: 8rem;
+	margin: 8rem 1rem 0 1rem;
+	
 }
 
 .membro img {
@@ -929,6 +930,7 @@ nav {
 		/* margin-left: auto; */
 	}
 
+	
 	/* #citazione-home {
 		position: absolute;
 		top: 197px;
@@ -1054,6 +1056,15 @@ nav {
 
 	.main-bambini h1 {
 		margin-top: 10rem;
+	}
+	/* -------------------------------------------------------------------------- */
+	/*                          PAGINA BAMBINI HOVER CARD                         */
+	/* -------------------------------------------------------------------------- */
+	@media (hover: hover) {
+		.card-wrapper:hover .carta-bambini,
+		.card-wrapper.flip-right:hover .carta-bambini {
+			transform: rotateY(180deg);
+		}
 	}
 	/* -------------------------------------------------------------------------- */
 	/*                                 SOTTOPAGINE                                */
